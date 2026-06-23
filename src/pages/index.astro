@@ -1,17 +1,631 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import ProjectViewer from "../components/ProjectViewer.jsx";
+import { getCollection } from "astro:content";
 
+const liveProjects = await getCollection("projects");
+import ashvinImage from "../assets/images/ashvin.png";
+
+const brands = [
+  "Tata",
+  "Gatorade",
+  "Cult.fit",
+  "TVS Motors",
+  "UB Group",
+  "Britannia",
+  "Abhibus",
+  "Planet Fashion",
+  "Sonata",
+  "ING",
+  "Garuda Foods",
+  "Pepsico",
+  "UniverCell",
+];
+
+const fallbackProjects = [
+  {
+    data: {
+      title: "Tata Gluco Jelly: Gravity Defying Bounce",
+      client: "Tata Consumer Products",
+      category: "TV Commercial",
+      tags: ["Practical Effects", "Live Stunts"],
+      youtubeId: "F_pRkYpZHm0",
+      metricValue: "Zero CG",
+      metricLabel: "Mammoth Live Stunt Production",
+    },
+  },
+  {
+    data: {
+      title: "Cult.fit: End of Season Sale",
+      client: "Cult",
+      category: "TV Commercial",
+      tags: ["Humour", "Fitness"],
+      youtubeId: "uSdatu0rjr8",
+      metricValue: "High Conversion",
+      metricLabel: "Cult-Classic Directorial Style",
+    },
+  },
+  {
+    data: {
+      title: "Gatorade: Teacher's Day Tribute",
+      client: "Gatorade (feat. PV Sindhu)",
+      category: "Independent Film",
+      tags: ["Social Awareness", "Rapid Turnaround"],
+      youtubeId: "BMxjBdqkpy0",
+      metricValue: "24-Hr Window",
+      metricLabel: "Shot Post-London Silver Victory",
+    },
+  },
+  {
+    data: {
+      title: "Gone Mad: Precision Sync Shoot",
+      client: "Gone Mad",
+      category: "TV Commercial",
+      tags: ["Choreography", "Pre-composed Music"],
+      youtubeId: "7i2E_hDZaec",
+      metricValue: "1-Day Shoot",
+      metricLabel: "Zero-Latency Pre-rehearsed Cast",
+    },
+  },
+  {
+    data: {
+      title: "TVS Neo AMI: African Continental Launch",
+      client: "TVS Motor Company",
+      category: "Film",
+      tags: ["Global Scale", "Localization"],
+      youtubeId: "vQDM4tFyiOU",
+      metricValue: "Multi-Region",
+      metricLabel: "Recreated Locales & Native Casting",
+    },
+  },
+];
+
+const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Avakkai Studio — TV & Digital Ad Production">
+  <section
+    class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-dark"
+  >
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10"
+      >
+      </div>
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        class="w-full h-full object-cover scale-[1.02] filter brightness-[0.5] contrast-[1.05]"
+      >
+        <source src="/video/hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div
+      class="relative w-full max-w-7xl mx-auto px-6 lg:px-10 py-32 z-20 mt-12 flex flex-col justify-between h-full"
+    >
+      <div class="max-w-3xl">
+        <div class="mb-6">
+          <p
+            class="text-brand-primary text-xs tracking-[0.3em] uppercase font-body font-bold"
+          >
+            TV Ads · Digital Films · Campaigns
+          </p>
+        </div>
+
+        <h1
+          class="text-5xl md:text-8xl font-black text-white leading-[0.95] tracking-tight mb-8 font-display"
+        >
+          Films that move<br />
+          <span class="text-brand-secondary italic font-normal font-display"
+            >people</span
+          > —<br />
+          and metrics.
+        </h1>
+
+        <p
+          class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light"
+        >
+          25 years of storytelling across TV and digital. From Tata to Gatorade
+          to Kingfisher — we produce high-impact ads that scale brand identity.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
+        >
+          <a
+            href="#work"
+            class="group inline-flex items-center gap-3 bg-brand-primary hover:bg-opacity-90 text-white px-8 py-4 text-sm font-semibold transition-all shadow-xl"
+          >
+            See Our Work
+            <span class="group-hover:translate-x-1 transition-transform">→</span
+            >
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 border border-white/30 hover:border-white hover:bg-white/5 text-white px-8 py-4 text-sm font-medium transition-colors backdrop-blur-sm"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 text-white mt-20 pt-10 border-t border-brand-border/40 max-w-5xl"
+      >
+        <div class="border-r border-brand-border/30 last:border-0">
+          <p
+            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+          >
+            100+
+          </p>
+          <p
+            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+          >
+            Films Produced
+          </p>
+        </div>
+        <div class="border-r border-brand-border/30 last:border-0">
+          <p
+            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+          >
+            75+
+          </p>
+          <p
+            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+          >
+            Brands Served
+          </p>
+        </div>
+        <div class="border-r border-brand-border/30 last:border-0">
+          <p
+            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+          >
+            25+
+          </p>
+          <p
+            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+          >
+            Years of Craft
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+          >
+            10+
+          </p>
+          <p
+            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+          >
+            Industry Awards
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-brand-primary via-brand-border to-transparent"
+    >
+    </div>
+  </section>
+
+  <!-- BRAND MARQUEE SECTION -->
+  <section class="bg-black py-14 relative z-10 overflow-hidden">
+  
+  <!-- Row 1: Static Title Header -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <p class="text-center text-xs text-zinc-500 tracking-[0.25em] uppercase mb-10 font-body font-semibold">
+      Brands we've worked with
+    </p>
+  </div>
+
+  <!-- Row 2: Infinite Scrolling Marquee Track -->
+  <div class="relative w-full overflow-hidden flex select-none masking-fade gap-16">
+    
+    <!-- Primary Track Loop -->
+    <div class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll">
+      {brands.map((brand) => (
+        <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
+          {brand}
+        </span>
+      ))}
+    </div>
+
+    <!-- Duplicate Track Loop -->
+    <div class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll" aria-hidden="true">
+      {brands.map((brand) => (
+        <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
+          {brand}
+        </span>
+      ))}
+    </div>
+    
+  </div>
+</section>
+
+  <!-- THE CASE FOR VIDEO IN THE ATTENTION ECONOMY -->
+  <section class="bg-brand-dark border-b border-brand-border py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Column: Strategic Value Proposition -->
+        <div>
+          <p
+            class="text-brand-primary text-xs tracking-[0.25em] uppercase font-body font-bold mb-4"
+          >
+            The Attention Economy
+          </p>
+          <h2
+            class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6 font-display"
+          >
+            Stop competing for attention. Command it.
+          </h2>
+          <p class="text-zinc-400 text-lg leading-relaxed mb-8 font-light">
+            In the modern marketplace, static content is invisible. Video is no
+            longer just a component of your marketing mix—it is the primary
+            driver of brand growth. From legacy TV campaigns that establish
+            institutional authority to high-velocity digital films on YouTube
+            and Instagram that drive immediate action, cinematic storytelling is
+            how premium brands win markets. We capture that split-second window
+            of consumer focus and translate it directly into commercial scale.
+          </p>
+        </div>
+
+        <!-- Right Column: Operational Core Capabilities -->
+        <div class="grid grid-cols-2 gap-4 font-sans">
+          <div class="bg-brand-card p-6 border border-brand-border rounded-xl">
+            <h3 class="font-bold text-white mb-2 font-display text-base">
+              TV Commercials
+            </h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              30-sec and 60-sec brand films engineered for broadcast impact.
+            </p>
+          </div>
+          <div class="bg-brand-card p-6 border border-brand-border rounded-xl">
+            <h3 class="font-bold text-white mb-2 font-display text-base">
+              Digital Films
+            </h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Social-first content crafted for scroll-stopping performance.
+            </p>
+          </div>
+          <div class="bg-brand-card p-6 border border-brand-border rounded-xl">
+            {
+              /* High-profile productions with A-list talent, supported by past projects[cite: 1] */
+            }
+            <h3 class="font-bold text-white mb-2 font-display text-base">
+              Celebrity Campaigns
+            </h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              High-profile productions with A-list talent, seamlessly executed.
+            </p>
+          </div>
+          <div class="bg-brand-card p-6 border border-brand-border rounded-xl">
+            {
+              /* Multi-market campaigns with region-specific talent, supported by TVS campaigns[cite: 1] */
+            }
+            <h3 class="font-bold text-white mb-2 font-display text-base">
+              International Markets
+            </h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Multi-market campaigns with region-specific talent and creative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="py-28 px-6 max-w-7xl mx-auto">
+    <div class="mb-16">
+      <p
+        class="text-brand-secondary text-xs tracking-[0.25em] uppercase font-body font-semibold mb-3"
+      >
+        Selected Portfolio
+      </p>
+      <h2
+        class="text-4xl md:text-6xl font-bold font-display tracking-tight text-white"
+      >
+        Stories we've told.
+      </h2>
+    </div>
+
+    <ProjectViewer client:load initialProjects={finalProjects} />
+  </section>
+
+  <!-- ABOUT SECTION WITH IMAGE ARCHITECTURE -->
+  <section
+    id="about"
+    class="bg-brand-card border-y border-brand-border py-28 px-6"
+  >
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+    >
+      <!-- Left Column: Cinematic Portrait / Image Frame -->
+      <div
+        class="lg:col-span-5 relative group overflow-hidden border border-brand-border rounded-2xl aspect-[4/5] bg-brand-dark"
+      >
+        <img
+          src={ashvinImage.src}
+          alt="Ashvin — Director & Founder"
+          class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-102 transition-all duration-700 ease-out"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80 pointer-events-none"
+        >
+        </div>
+      </div>
+
+      <!-- Right Column: Condensed Editorial Copy -->
+      <div class="lg:col-span-7 space-y-6">
+        <div>
+          <span
+            class="text-brand-primary font-mono text-xs uppercase tracking-widest font-bold"
+            >// Directorial Pedigree</span
+          >
+          <h2
+            class="text-4xl md:text-5xl font-black text-white mt-2 tracking-tight font-display"
+          >
+            The Vision Behind Avakkai
+          </h2>
+        </div>
+
+        <div
+          class="space-y-6 text-zinc-300 font-light text-base leading-relaxed"
+        >
+          <p>
+            Twenty-five years of elite commercial filmmaking and high-impact
+            storytelling form the foundational DNA of Avakkai Studio.
+          </p>
+          <p>
+            From working alongside industry vanguard R. Balki as an Associate
+            Director on the sets of <em>Cheeni Kum</em> to directing a monumental
+            social awareness campaign that reached <strong
+              class="text-brand-secondary font-medium"
+              >16 million views in under 24 hours</strong
+            >, director <strong class="text-white font-medium">Ashvin</strong> has
+            consistently pushed the boundaries of moving images.
+          </p>
+          <p>
+            He has engineered Avakkai into a seamless, borderless, turnkey
+            production ecosystem. Our focus is singular: executing gripping,
+            premium visual narratives backed by ironclad strategy to drive
+            commercial scale for brands across the globe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-dark py-32 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
+      <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
+      <div class="absolute top-0 left-3/4 w-[1px] h-full bg-white"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-7 space-y-12">
+          <div>
+            <div class="inline-flex items-center gap-2 mb-4">
+              <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"
+              ></span>
+              <p
+                class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold"
+              >
+                Cultural Impact
+              </p>
+            </div>
+
+            <h3
+              class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white mb-6"
+            >
+              "Reached <span class="text-brand-secondary italic font-normal"
+                >16 million views</span
+              > in under 24 hours."
+            </h3>
+
+            <p
+              class="text-zinc-400 font-light text-lg max-w-xl leading-relaxed"
+            >
+              That's the power of a story told with absolute intention. Our <span
+                class="text-white font-medium">Stand Up</span
+              > social awareness campaign proved that purposeful filmmaking moves
+              cultural metrics—not just audiences.
+            </p>
+          </div>
+
+          <div class="pt-8 border-t border-brand-border">
+            <p
+              class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium"
+            >
+              Official Showcases & Honors
+            </p>
+            <div class="grid grid-cols-3 gap-6">
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  Silver Abby
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
+                <p
+                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Winner 2017
+                </p>
+              </div>
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  Kyoorius
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
+                <p
+                  class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Shortlisted
+                </p>
+              </div>
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  3 Elephants
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
+                <p
+                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Kyoorius 2017
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 lg:pl-6 space-y-8 mt-4 lg:mt-0">
+          <p
+            class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-body font-medium lg:text-right block"
+          >
+            Studio Reputation
+          </p>
+
+          <div
+            class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
+          >
+            <span
+              class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
+            ></span>
+            <p
+              class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
+            >
+              "Ashvin brings a filmmaker's eye to every brief — bold concepts,
+              flawless production coordination, and visual results that speak
+              for themselves."
+            </p>
+            <div
+              class="flex items-center justify-between pt-4 border-t border-brand-border"
+            >
+              <div>
+                <p class="text-white font-medium text-xs tracking-wide">
+                  Brand Management Team
+                </p>
+                <p
+                  class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
+                >
+                  International Campaign
+                </p>
+              </div>
+              <span
+                class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
+                >”</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
+          >
+            <span
+              class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
+            ></span>
+            <p
+              class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
+            >
+              "The TVS Africa documentary series was delivered seamlessly —
+              completely right talent, authentic locale look and feel, tightly
+              on schedule and completely on brief."
+            </p>
+            <div
+              class="flex items-center justify-between pt-4 border-t border-brand-border"
+            >
+              <div>
+                <p class="text-white font-medium text-xs tracking-wide">
+                  Marketing & Communications Lead
+                </p>
+                <p
+                  class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
+                >
+                  TVS Motors International
+                </p>
+              </div>
+              <span
+                class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
+                >”</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFINED NEUTRAL CTA SECTION -->
+  <section id="contact" class="bg-brand-dark py-24 border-t border-brand-border relative">
+    {/* Subtle brand primary background ambient blur */}
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
+      <h2 class="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight">
+        Ready to make something<br /><em class="not-italic text-brand-secondary">unforgettable?</em>
+      </h2>
+      <p class="text-zinc-400 text-lg mb-12 max-w-xl mx-auto font-light">
+        Whether it's a 30-second TVC or a campaign spanning continents — we build stories that work.
+      </p>
+
+      <!-- Step 1: Direct Contact Channels (Clean text links instead of heavy blocks) -->
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-zinc-300 font-mono text-base mb-12">
+        <a href="mailto:reach@avakkai.studio" class="hover:text-brand-secondary transition-colors flex items-center gap-2">
+          <span class="text-brand-primary">@</span> reach@avakkai.studio
+        </a>
+        <span class="hidden sm:inline text-brand-border">|</span>
+        <a href="tel:9611104445" class="hover:text-brand-secondary transition-colors flex items-center gap-2">
+          <span class="text-brand-primary">#</span> +91 96111 04445
+        </a>
+      </div>
+
+      <!-- Step 2: Clear Action Button to New Form Page -->
+      <div class="font-mono">
+        <a 
+          href="/start-project" 
+          class="inline-flex items-center justify-center bg-brand-primary hover:bg-opacity-90 text-white font-bold px-10 py-5 text-sm tracking-widest uppercase rounded-xl shadow-xl transition-all hover:-translate-y-0.5 cursor-pointer"
+        >
+          Start a Project 
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-marquee-scroll {
+    animation: marquee 35s linear infinite;
+  }
+
+  /* Creates a high-end cinematic fade on the edges of the screen */
+  .masking-fade {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+</style>

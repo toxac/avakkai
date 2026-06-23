@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Import Premium Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700;900&display=swap');
+
+@theme {
+  /* Cinematic Base Layer (Obsidian with Violet Depth) */
+  --color-brand-dark: #07040a;     
+  --color-brand-card: #120b1e;     /* Deep slate-purple surface */
+  --color-brand-border: #211633;   /* Geometric lines matching core tones */
+
+  /* The True Avakkai Brand Primitives */
+  --color-brand-primary: #5c12a7;  /* Purple */
+  --color-brand-secondary: #f4c022;/* Yellow */
+
+  /* Typography Infrastructure */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-brand-dark);
+    color: #f4f4f5; /* zinc-100 */
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}

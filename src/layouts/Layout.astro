@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-brand-dark text-zinc-100 scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Avakkai Studio - Premium Commercial and Film Production" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="font-sans selection:bg-spice-red selection:text-white overflow-x-hidden antialiased">
+		<!-- Seamless Navbar -->
+		<nav class="w-full fixed top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border px-6 py-4">
+			<div class="max-w-7xl mx-auto flex justify-between items-center">
+				<a href="/" class="text-xl font-black tracking-tighter uppercase text-white">
+					Avakkai<span class="text-spice-red">.</span>Studio
+				</a>
+				<div class="flex items-center gap-6 text-sm text-zinc-400 font-medium">
+					<a href="#work" class="hover:text-white transition-colors">Our Work</a>
+					<a href="#ai-sprint" class="hover:text-white transition-colors">AI Digital Sprint</a>
+					<a href="#contact" class="px-4 py-2 bg-spice-red hover:bg-rose-700 text-white font-bold rounded-lg transition-all text-xs tracking-wider uppercase">
+						Get a Quote
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Main Render Slot -->
+		<main class="min-h-screen">
+			<slot />
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-brand-dark border-t border-brand-border py-12 px-6 text-xs text-zinc-600">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        
+        <!-- Left Column: Copyright Anchor -->
+        <p class="order-3 md:order-1 text-zinc-500">
+            © 2026 Avakkai Studio. All rights reserved.
+        </p>
+        
+        <!-- Center Column: Integrated Social Channels -->
+        <div class="flex items-center gap-6 font-mono tracking-wider uppercase text-[11px] order-1 md:order-2">
+            <a 
+                href="https://www.youtube.com/@Avakkai.Studio" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-white transition-colors"
+            >
+                YouTube
+            </a>
+            <span class="text-brand-border">/</span>
+            <a 
+                href="https://www.instagram.com/avakkaifilms/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-white transition-colors"
+            >
+                Instagram
+            </a>
+            <span class="text-brand-border">/</span>
+            <a 
+                href="https://in.linkedin.com/in/ashvin-naidu-a1a46615" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="hover:text-white transition-colors"
+            >
+                LinkedIn
+            </a>
+        </div>
+        
+        <!-- Right Column: Studio Value Pillars -->
+        <p class="font-mono tracking-widest uppercase text-[10px] text-zinc-400 order-2 md:order-3">
+            Taste • Strategy • Scale
+        </p>
+        
+    </div>
+</footer>
+	</body>
+</html>
