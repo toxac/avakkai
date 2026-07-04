@@ -1,21 +1,31 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-const projectsCollection = defineCollection({
-  type: 'content',
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/projects' }),
   schema: z.object({
     title: z.string(),
-    client: z.string(),
-    // Strict categories enforced as requested
-    category: z.enum(['TV Commercial', 'Film', 'Independent Film']),
-    tags: z.array(z.string()),
-    youtubeId: z.string(),
+    client: z.string().optional(),
+    category: z.string(),
+    description: z.string(),
+    youtubeId: z.string().optional(),
+    youtubeIds: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
-    // Core B2B conversion metrics
-    metricValue: z.string(),   // e.g., "1-Day Shoot", "Zero-CG Stunts", "16M+ Views"
-    metricLabel: z.string(),   // e.g., "Production Efficiency", "Visual Scale", "Organic Reach"
+    highlight: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    date: z.string().optional(),
   }),
 });
 
-export const collections = {
-  'projects': projectsCollection,
-};
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.mdx', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.string(),
+    author: z.string().default('Avakkai Studio'),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { projects, blog };

@@ -22,19 +22,28 @@ const { title } = Astro.props;
 	<body class="font-sans selection:bg-spice-red selection:text-white overflow-x-hidden antialiased">
 		<!-- Seamless Navbar -->
 		<nav class="w-full fixed top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border px-6 py-4">
-			<div class="max-w-7xl mx-auto flex justify-between items-center">
-				<a href="/" class="text-xl font-black tracking-tighter uppercase text-white">
-					Avakkai<span class="text-spice-red">.</span>Studio
-				</a>
-				<div class="flex items-center gap-6 text-sm text-zinc-400 font-medium">
-					<a href="#work" class="hover:text-white transition-colors">Our Work</a>
-					<a href="#ai-sprint" class="hover:text-white transition-colors">AI Digital Sprint</a>
-					<a href="#contact" class="px-4 py-2 bg-spice-red hover:bg-rose-700 text-white font-bold rounded-lg transition-all text-xs tracking-wider uppercase">
-						Get a Quote
-					</a>
-				</div>
-			</div>
-		</nav>
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo Branding with Brand Accent dot -->
+        <a href="/" class="text-xl font-black tracking-tighter uppercase text-white font-display">
+            Avakkai<span class="text-brand-secondary">.</span>Studio
+        </a>
+        
+        <!-- Navigation Link Matrix -->
+        <div class="flex items-center gap-6 text-sm text-zinc-400 font-medium font-mono text-xs">
+            <a href="#work" class="hover:text-white transition-colors">Projects</a>
+            <a href="#about" class="hover:text-white transition-colors">About</a>
+            <a href="#contact" class="hover:text-white transition-colors hidden sm:inline">Contact</a>
+            
+            <!-- High-Yield Onboarding Action Link -->
+            <a 
+                href="/start-project" 
+                class="px-5 py-2.5 bg-brand-primary hover:bg-opacity-90 text-white font-bold rounded-xl transition-all tracking-widest uppercase text-[10px] shadow-md cursor-pointer"
+            >
+                Start Project
+            </a>
+        </div>
+    </div>
+</nav>
 
 		<!-- Main Render Slot -->
 		<main class="min-h-screen">
