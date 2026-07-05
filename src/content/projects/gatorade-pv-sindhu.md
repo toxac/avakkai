@@ -4,6 +4,7 @@ client: "PepsiCo / Gatorade"
 category: "Celebrity TVC"
 description: "Avakkai Studio captured an extraordinary moment in sports history — shooting a Teacher's Day tribute film with Olympic silver medallist PV Sindhu and her coach P Gopichand just 24 hours after her historic win at London 2012. The film celebrates the relentless coach-athlete relationship, showcasing Sindhu's grit and Gopichand's unwavering belief that pushed her toward greatness. Released on Teacher's Day, the film went viral with 5 million+ views on day one, becoming one of Gatorade's most memorable digital campaigns."
 youtubeId: "BMxjBdqkpy0"
+cardImage: "gatorade-pv-sindhu.png"
 featured: true
 highlight: "Shot 24hrs after Olympic silver | PV Sindhu & P Gopichand | 5M+ views on day 1 | London 2012"
 tags: ["Celebrity", "Sports", "TVC", "Gatorade", "PV Sindhu", "P Gopichand", "Teacher's Day", "Campaign", "Olympics", "Badminton"]

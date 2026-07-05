@@ -4,6 +4,7 @@ client: "TVS Motor Company"
 category: "Digital Film"
 description: "Avakkai Studio produced a premium launch film for TVS HLX 150F, built specifically for urban Egypt. Shot in a Bangalore studio against a 14-foot LED wall, the mixed-media film combined feature-forward visual storytelling with art-directed in-camera environments. Developed direct-to-client, the brand tagline, look, and premium visual language were originated for the Egyptian market — not localised, but created from the ground up. The result: a bike positioned for performance and presence, styled with premium intent."
 youtubeId: "L58Fve5Lzus"
+cardImage: "tvs-hlx-150f-egypt.png"
 featured: false
 highlight: "14-foot LED wall shoot | Bangalore studio | Originated for Egypt | Direct-to-client"
 tags: ["Digital Film", "TVS", "HLX 150F", "Egypt", "Launch Campaign", "Motorcycle", "LED Wall", "Studio Production", "Premium Branding", "Mixed Media"]

@@ -4,6 +4,7 @@ client: "TVS Motor Company"
 category: "Digital Film"
 description: "Avakkai Studio created a fully post-produced digital film celebrating TVS HLX's 10-year anniversary in Africa. With no shoot days or live-action footage, the film was built entirely at the edit and VFX desk, featuring a 3D-modelled '10' travelling across the continent through licensed stock footage. Timed around the African Nations Championship, the number carries a dual meaning — ten years of HLX and the jersey number of football heroes — tying the brand's milestone to a moment the whole continent was watching."
 youtubeId: "6DKQh_zXSt8"
+cardImage: "tvs-hlx-10-years.png"
 featured: false
 highlight: "Zero shoot days | Fully post-produced | 3D-modelled '10' | African Nations Championship timing"
 tags: ["Digital Film", "TVS", "HLX", "Africa", "Anniversary", "Post-Production", "VFX", "3D Animation", "African Nations Championship", "Brand Film", "Motion Graphics"]

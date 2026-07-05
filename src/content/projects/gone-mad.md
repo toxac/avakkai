@@ -3,6 +3,7 @@ title: "Gone Mad Chocostick — Musical TVC"
 category: "Digital Film"
 description: "Avakkai Studio produced a music-led digital film for Gone Mad Chocostick, built entirely around a pre-composed jingle that captures the universal instant of a chocolate craving. From concept to final delivery, the project was executed start-to-finish directly with the client — no middle layer — ensuring the music and visuals remained tightly wired together. Shot in a single day with full cast choreography, the film's energy feels alive because every beat, every movement, and every frame was mapped to the track before cameras rolled, creating a hummable, rewatchable snack jingle that does the selling before a single line of dialogue."
 youtubeId: "7i2E_hDZaec"
+cardImage: "gone-mad.png"
 featured: false
 highlight: "Pre-composed jingle-led | Full cast choreography | 1-day shoot | Direct-to-client execution"
 tags: ["Digital Film", "Music-Led", "Choreography", "Jingle", "Snack Brand", "Kids", "Family", "Craving", "Commercial"]

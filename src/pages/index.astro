@@ -111,7 +111,7 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
       <div class="max-w-3xl">
         <div class="mb-6">
           <p
-            class="text-brand-primary text-xs tracking-[0.3em] uppercase font-body font-bold"
+            class="text-brand-secondary text-xs tracking-[0.3em] uppercase font-body font-bold"
           >
             TV Ads · Digital Films · Campaigns
           </p>
@@ -216,37 +216,47 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
 
   <!-- BRAND MARQUEE SECTION -->
   <section class="bg-black py-14 relative z-10 overflow-hidden">
-  
-  <!-- Row 1: Static Title Header -->
-  <div class="max-w-7xl mx-auto px-6 lg:px-10">
-    <p class="text-center text-xs text-zinc-500 tracking-[0.25em] uppercase mb-10 font-body font-semibold">
-      Brands we've worked with
-    </p>
-  </div>
-
-  <!-- Row 2: Infinite Scrolling Marquee Track -->
-  <div class="relative w-full overflow-hidden flex select-none masking-fade gap-16">
-    
-    <!-- Primary Track Loop -->
-    <div class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll">
-      {brands.map((brand) => (
-        <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
-          {brand}
-        </span>
-      ))}
+    <!-- Row 1: Static Title Header -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <p
+        class="text-center text-xs text-zinc-500 tracking-[0.25em] uppercase mb-10 font-body font-semibold"
+      >
+        Brands we've worked with
+      </p>
     </div>
 
-    <!-- Duplicate Track Loop -->
-    <div class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll" aria-hidden="true">
-      {brands.map((brand) => (
-        <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
-          {brand}
-        </span>
-      ))}
+    <!-- Row 2: Infinite Scrolling Marquee Track -->
+    <div
+      class="relative w-full overflow-hidden flex select-none masking-fade gap-16"
+    >
+      <!-- Primary Track Loop -->
+      <div
+        class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll"
+      >
+        {
+          brands.map((brand) => (
+            <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
+              {brand}
+            </span>
+          ))
+        }
+      </div>
+
+      <!-- Duplicate Track Loop -->
+      <div
+        class="flex flex-nowrap shrink-0 items-center gap-16 min-w-full animate-marquee-scroll"
+        aria-hidden="true"
+      >
+        {
+          brands.map((brand) => (
+            <span class="text-white text-base md:text-lg font-bold opacity-75 hover:opacity-100 hover:text-brand-secondary transition-all font-display tracking-wide whitespace-nowrap cursor-default">
+              {brand}
+            </span>
+          ))
+        }
+      </div>
     </div>
-    
-  </div>
-</section>
+  </section>
 
   <!-- THE CASE FOR VIDEO IN THE ATTENTION ECONOMY -->
   <section class="bg-brand-dark border-b border-brand-border py-24">
@@ -402,7 +412,85 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
     </div>
   </section>
 
-  <section class="bg-brand-dark py-32 text-white relative overflow-hidden">
+  <!-- CULTURAL IMPACT SECTION -->
+  <!-- CULTURAL IMPACT SECTION -->
+<section class="bg-brand-dark py-32 text-white relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5 pointer-events-none">
+    <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
+    <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
+    <div class="absolute top-0 left-3/4 w-[1px] h-full bg-white"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <!-- Left Column: Main Content -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
+          <p class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold">
+            Cultural Impact
+          </p>
+        </div>
+
+        <h3 class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white">
+          "Reached <span class="text-brand-secondary italic font-normal">16 million views</span> in under 24 hours."
+        </h3>
+
+        <p class="text-zinc-400 font-light text-lg leading-relaxed max-w-xl">
+          That's the power of a story told with absolute intention. Our <span class="text-white font-medium">Stand Up</span> social awareness campaign proved that purposeful filmmaking moves cultural metrics—not just audiences.
+        </p>
+      </div>
+
+      <!-- Right Column: Awards & Honors -->
+      <div class="lg:col-span-5">
+        <div class="lg:pl-6">
+          <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium">
+            Official Showcases & Honors
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
+            <!-- Award 1 -->
+            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
+              <p class="text-white font-bold text-base tracking-tight font-display">
+                Silver Abby
+              </p>
+              <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
+              <p class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2">
+                Winner 2017
+              </p>
+            </div>
+
+            <!-- Award 2 -->
+            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
+              <p class="text-white font-bold text-base tracking-tight font-display">
+                Kyoorius
+              </p>
+              <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
+              <p class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2">
+                Shortlisted
+              </p>
+            </div>
+
+            <!-- Award 3 -->
+            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
+              <p class="text-white font-bold text-base tracking-tight font-display">
+                3 Elephants
+              </p>
+              <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
+              <p class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2">
+                Kyoorius 2017
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section
+    class="bg-brand-dark py-32 text-white relative overflow-hidden border-t border-brand-border"
+  >
     <div class="absolute inset-0 opacity-5 pointer-events-none">
       <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
       <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
@@ -410,164 +498,87 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
     </div>
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-        <div class="lg:col-span-7 space-y-12">
-          <div>
-            <div class="inline-flex items-center gap-2 mb-4">
-              <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"
-              ></span>
+      <div class="text-center mb-16">
+        <p
+          class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-body font-medium"
+        >
+          Studio Reputation
+        </p>
+        <h2
+          class="text-3xl md:text-4xl font-black text-white font-display mt-4"
+        >
+          What Our <span class="text-brand-secondary italic font-normal"
+            >Clients</span
+          > Say
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <!-- Testimonial 1 -->
+        <div
+          class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
+        >
+          <span
+            class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
+          ></span>
+          <p
+            class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
+          >
+            "Ashvin brings a filmmaker's eye to every brief — bold concepts,
+            flawless production coordination, and visual results that speak for
+            themselves."
+          </p>
+          <div
+            class="flex items-center justify-between pt-4 border-t border-brand-border"
+          >
+            <div>
+              <p class="text-white font-medium text-xs tracking-wide">
+                Brand Management Team
+              </p>
               <p
-                class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold"
+                class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
               >
-                Cultural Impact
+                International Campaign
               </p>
             </div>
-
-            <h3
-              class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white mb-6"
+            <span
+              class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
+              >"</span
             >
-              "Reached <span class="text-brand-secondary italic font-normal"
-                >16 million views</span
-              > in under 24 hours."
-            </h3>
-
-            <p
-              class="text-zinc-400 font-light text-lg max-w-xl leading-relaxed"
-            >
-              That's the power of a story told with absolute intention. Our <span
-                class="text-white font-medium">Stand Up</span
-              > social awareness campaign proved that purposeful filmmaking moves
-              cultural metrics—not just audiences.
-            </p>
-          </div>
-
-          <div class="pt-8 border-t border-brand-border">
-            <p
-              class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium"
-            >
-              Official Showcases & Honors
-            </p>
-            <div class="grid grid-cols-3 gap-6">
-              <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
-              >
-                <p
-                  class="text-white font-bold text-base tracking-tight font-display"
-                >
-                  Silver Abby
-                </p>
-                <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
-                <p
-                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
-                >
-                  Winner 2017
-                </p>
-              </div>
-              <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
-              >
-                <p
-                  class="text-white font-bold text-base tracking-tight font-display"
-                >
-                  Kyoorius
-                </p>
-                <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
-                <p
-                  class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2"
-                >
-                  Shortlisted
-                </p>
-              </div>
-              <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
-              >
-                <p
-                  class="text-white font-bold text-base tracking-tight font-display"
-                >
-                  3 Elephants
-                </p>
-                <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
-                <p
-                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
-                >
-                  Kyoorius 2017
-                </p>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div class="lg:col-span-5 lg:pl-6 space-y-8 mt-4 lg:mt-0">
+        <!-- Testimonial 2 -->
+        <div
+          class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
+        >
+          <span
+            class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
+          ></span>
           <p
-            class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-body font-medium lg:text-right block"
+            class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
           >
-            Studio Reputation
+            "The TVS Africa documentary series was delivered seamlessly —
+            completely right talent, authentic locale look and feel, tightly on
+            schedule and completely on brief."
           </p>
-
           <div
-            class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
+            class="flex items-center justify-between pt-4 border-t border-brand-border"
           >
-            <span
-              class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
-            ></span>
-            <p
-              class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
-            >
-              "Ashvin brings a filmmaker's eye to every brief — bold concepts,
-              flawless production coordination, and visual results that speak
-              for themselves."
-            </p>
-            <div
-              class="flex items-center justify-between pt-4 border-t border-brand-border"
-            >
-              <div>
-                <p class="text-white font-medium text-xs tracking-wide">
-                  Brand Management Team
-                </p>
-                <p
-                  class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
-                >
-                  International Campaign
-                </p>
-              </div>
-              <span
-                class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
-                >”</span
+            <div>
+              <p class="text-white font-medium text-xs tracking-wide">
+                Marketing & Communications Lead
+              </p>
+              <p
+                class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
               >
+                TVS Motors International
+              </p>
             </div>
-          </div>
-
-          <div
-            class="relative bg-brand-card border border-brand-border p-8 hover:border-zinc-700 transition-colors shadow-2xl group rounded-xl"
-          >
             <span
-              class="absolute top-0 left-0 w-[2px] h-0 bg-brand-primary group-hover:h-full transition-all duration-300"
-            ></span>
-            <p
-              class="text-zinc-300 font-light text-base leading-relaxed italic mb-6"
+              class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
+              >"</span
             >
-              "The TVS Africa documentary series was delivered seamlessly —
-              completely right talent, authentic locale look and feel, tightly
-              on schedule and completely on brief."
-            </p>
-            <div
-              class="flex items-center justify-between pt-4 border-t border-brand-border"
-            >
-              <div>
-                <p class="text-white font-medium text-xs tracking-wide">
-                  Marketing & Communications Lead
-                </p>
-                <p
-                  class="text-zinc-500 text-[10px] uppercase tracking-wider mt-0.5"
-                >
-                  TVS Motors International
-                </p>
-              </div>
-              <span
-                class="text-brand-border text-4xl font-display font-black group-hover:text-brand-secondary transition-colors"
-                >”</span
-              >
-            </div>
           </div>
         </div>
       </div>
@@ -575,48 +586,84 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
   </section>
 
   <!-- REFINED NEUTRAL CTA SECTION -->
-  <section id="contact" class="bg-brand-dark py-24 border-t border-brand-border relative">
-    {/* Subtle brand primary background ambient blur */}
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-    
-    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
-      <h2 class="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight">
-        Ready to make something<br /><em class="not-italic text-brand-secondary">unforgettable?</em>
-      </h2>
-      <p class="text-zinc-400 text-lg mb-12 max-w-xl mx-auto font-light">
-        Whether it's a 30-second TVC or a campaign spanning continents — we build stories that work.
-      </p>
+<section
+  id="contact"
+  class="bg-brand-dark py-24 border-t border-brand-border relative"
+>
+  <!-- Subtle brand primary background ambient blur -->
+  <div
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"
+  >
+  </div>
 
-      <!-- Step 1: Direct Contact Channels (Clean text links instead of heavy blocks) -->
-      <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-zinc-300 font-mono text-base mb-12">
-        <a href="mailto:reach@avakkai.studio" class="hover:text-brand-secondary transition-colors flex items-center gap-2">
-          <span class="text-brand-primary">@</span> reach@avakkai.studio
-        </a>
-        <span class="hidden sm:inline text-brand-border">|</span>
-        <a href="tel:9611104445" class="hover:text-brand-secondary transition-colors flex items-center gap-2">
-          <span class="text-brand-primary">#</span> +91 96111 04445
-        </a>
-      </div>
+  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
+    <h2
+      class="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight"
+    >
+      Ready to make something<br /><em class="not-italic text-brand-secondary"
+        >unforgettable?</em
+      >
+    </h2>
+    <p class="text-zinc-400 text-lg mb-12 max-w-xl mx-auto font-light">
+      Whether it's a 30-second TVC or a campaign spanning continents — we
+      build stories that work.
+    </p>
 
-      <!-- Step 2: Clear Action Button to New Form Page -->
-      <div class="font-mono">
-        <a 
-          href="/start-project" 
-          class="inline-flex items-center justify-center bg-brand-primary hover:bg-opacity-90 text-white font-bold px-10 py-5 text-sm tracking-widest uppercase rounded-xl shadow-xl transition-all hover:-translate-y-0.5 cursor-pointer"
-        >
-          Start a Project 
-        </a>
-      </div>
-      
+    <!-- Contact Channels -->
+    <div
+      class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-zinc-300 font-mono text-base mb-10"
+    >
+      <a
+        href="mailto:reach@avakkai.studio"
+        class="hover:text-brand-secondary transition-colors flex items-center gap-2"
+      >
+        <span class="text-brand-primary">@</span> reach@avakkai.studio
+      </a>
+      <span class="hidden sm:inline text-brand-border">|</span>
+      <a
+        href="tel:9611104445"
+        class="hover:text-brand-secondary transition-colors flex items-center gap-2"
+      >
+        <span class="text-brand-primary">#</span> +91 96111 04445
+      </a>
     </div>
-  </section>
 
+    <!-- Divider -->
+    <div class="flex items-center gap-6 justify-center mb-10">
+      <span class="h-px w-12 bg-brand-border"></span>
+      <span class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 font-body font-medium">or</span>
+      <span class="h-px w-12 bg-brand-border"></span>
+    </div>
+
+    <!-- Company Profile PDF Download -->
+    <div>
+      <a
+        href="/company-profile.pdf"
+        download
+        class="inline-flex items-center gap-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-xl border border-brand-primary/20 hover:border-brand-primary/40 transition-all shadow-lg hover:shadow-brand-primary/10"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+        </svg>
+        Download Company Profile
+        <span class="text-[8px] text-zinc-500 font-mono tracking-widest">PDF</span>
+      </a>
+      <p class="text-zinc-600 text-[10px] font-mono mt-3 tracking-wide">
+        2.4 MB • Includes portfolio, capabilities & case studies
+      </p>
+    </div>
+  </div>
+</section>
 </Layout>
 
 <style>
   @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-100%); }
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
   .animate-marquee-scroll {
@@ -625,7 +672,19 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
 
   /* Creates a high-end cinematic fade on the edges of the screen */
   .masking-fade {
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
   }
 </style>

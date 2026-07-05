@@ -12,6 +12,19 @@ export default function ProjectViewer({ initialProjects }) {
     ? initialProjects
     : initialProjects.filter(p => p.data.category === activeCategory);
 
+  // Helper function to get image path
+  const getImagePath = (project) => {
+    if (project.data.cardImage) {
+      // Use the filename from frontmatter
+      return `/images/projects/${project.data.cardImage}`;
+    }
+    // Fallback: try to match by project id with common extensions
+    const id = project.id;
+    const extensions = ['.jpg', '.png', '.webp'];
+    // Return a path that will be checked by the onError handler
+    return `/images/projects/${id}.jpg`;
+  };
+
   return (
     <div className="w-full">
       {/* Category Toggles */}
@@ -34,10 +47,8 @@ export default function ProjectViewer({ initialProjects }) {
       {/* Grid Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => {
-          // Use youtubeId as primary, fallback to first in youtubeIds
-          const videoId = project.data.youtubeId || 
-                         (project.data.youtubeIds && project.data.youtubeIds[0]) || 
-                         '';
+          // Build card image path
+          let cardImagePath = getImagePath(project);
           
           return (
             <a 
@@ -46,22 +57,53 @@ export default function ProjectViewer({ initialProjects }) {
               className="group bg-brand-card border border-brand-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-brand-secondary flex flex-col justify-between cursor-pointer no-underline"
             >
               <div>
-                {/* Aspect Ratio 16:9 Video Box */}
+                {/* Aspect Ratio 16:9 Image Card */}
                 <div className="relative aspect-video bg-black overflow-hidden">
-                  {videoId ? (
-                    <iframe 
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" 
-                      src={`https://www.youtube.com/embed/${videoId}`} 
-                      title={project.data.title}
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowFullScreen
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-brand-dark text-zinc-500 text-sm">
-                      No video available
+                  <img 
+                    src={cardImagePath}
+                    alt={project.data.title}
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(e) => {
+                      // Try alternative extensions if image fails to load
+                      const img = e.target;
+                      const currentSrc = img.src;
+                      const basePath = currentSrc.substring(0, currentSrc.lastIndexOf('.'));
+                      const currentExt = currentSrc.substring(currentSrc.lastIndexOf('.'));
+                      
+                      const extensions = ['.jpg', '.png', '.webp'];
+                      const currentIndex = extensions.indexOf(currentExt);
+                      
+                      // If current extension failed, try the next one
+                      if (currentIndex !== -1 && currentIndex < extensions.length - 1) {
+                        const nextExt = extensions[currentIndex + 1];
+                        img.src = basePath + nextExt;
+                        return;
+                      }
+                      
+                      // If all extensions fail, show fallback
+                      img.style.display = 'none';
+                      const parent = img.parentElement;
+                      const fallback = document.createElement('div');
+                      fallback.className = 'w-full h-full flex items-center justify-center bg-brand-dark text-zinc-500 text-sm';
+                      fallback.innerHTML = `
+                        <div class="text-center">
+                          <span class="block text-4xl mb-2">🎬</span>
+                          ${project.data.title}
+                        </div>
+                      `;
+                      parent.appendChild(fallback);
+                    }}
+                  />
+                  
+                  {/* Play icon overlay on hover */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
+                    <div className="w-16 h-16 rounded-full bg-brand-primary/90 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
                     </div>
-                  )}
+                  </div>
                 </div>
 
                 <div className="p-6">
@@ -80,7 +122,7 @@ export default function ProjectViewer({ initialProjects }) {
                 </div>
               </div>
 
-              {/* Strategy Outcome Panel - using real data or fallback */}
+              {/* Strategy Outcome Panel */}
               <div className="border-t border-brand-border p-5 bg-brand-dark/50 grid grid-cols-2 gap-4 text-xs font-mono">
                 <div>
                   <span className="text-zinc-500 block uppercase text-[9px] tracking-wider">Highlight</span>

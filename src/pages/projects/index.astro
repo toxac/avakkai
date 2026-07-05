@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectViewer from "../../components/ProjectViewer.jsx";
+import { getCollection } from "astro:content";
+
+// Get all projects and sort by date (newest first)
+const allProjects = await getCollection("projects");
+const sortedProjects = allProjects.sort((a, b) => {
+  if (!a.data.date && !b.data.date) return 0;
+  if (!a.data.date) return 1;
+  if (!b.data.date) return -1;
+  // Convert dates to timestamps (numbers) for comparison
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+
+<Layout 
+  title="Our Work — Avakkai Studio" 
+  description="Explore Avakkai Studio's portfolio of premium commercials, digital films, and celebrity campaigns. From TVCs to social awareness films — see our work."
+>
+  {/* Hero Section */}
+  <section class="relative bg-brand-dark border-b border-brand-border py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="max-w-3xl">
+        <p class="text-brand-primary text-xs tracking-[0.3em] uppercase font-body font-bold mb-4">
+          Portfolio
+        </p>
+        <h1 class="text-4xl md:text-6xl font-black text-white font-display leading-tight mb-6">
+          Our <span class="text-brand-secondary italic font-normal">Work</span>
+        </h1>
+        <p class="text-zinc-400 text-lg font-light max-w-2xl">
+          A curated selection of films, commercials, and campaigns — from celebrity-led TVCs to continent-spanning digital content.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Project Viewer */}
+  <section class="py-20 px-6 max-w-7xl mx-auto">
+    <ProjectViewer client:load initialProjects={sortedProjects} />
+  </section>
+</Layout>

@@ -1,100 +1,130 @@
 ---
 import '../styles/global.css';
+
 interface Props {
-	title: string;
+  title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Premium commercial and film production — Avakkai Studio crafts high-impact TVCs, digital films, and celebrity campaigns for brands across India and international markets." } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="bg-brand-dark text-zinc-100 scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Avakkai Studio - Premium Commercial and Film Production" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-		<title>{title}</title>
-	</head>
-	<body class="font-sans selection:bg-spice-red selection:text-white overflow-x-hidden antialiased">
-		<!-- Seamless Navbar -->
-		<nav class="w-full fixed top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border px-6 py-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <!-- Logo Branding with Brand Accent dot -->
-        <a href="/" class="text-xl font-black tracking-tighter uppercase text-white font-display">
-            Avakkai<span class="text-brand-secondary">.</span>Studio
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Open Graph / Social Media Meta -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="font-sans selection:bg-spice-red selection:text-white overflow-x-hidden antialiased">
+    <!-- Navbar -->
+    <nav class="w-full fixed top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border px-6 py-4">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2">
+          <img 
+            src="/logo.png" 
+            alt="Avakkai Studio" 
+            class="h-8 w-auto"
+            width="160" 
+            height="34"
+            loading="eager"
+          />
         </a>
         
-        <!-- Navigation Link Matrix -->
-        <div class="flex items-center gap-6 text-sm text-zinc-400 font-medium font-mono text-xs">
-            <a href="#work" class="hover:text-white transition-colors">Projects</a>
-            <a href="#about" class="hover:text-white transition-colors">About</a>
-            <a href="#contact" class="hover:text-white transition-colors hidden sm:inline">Contact</a>
-            
-            <!-- High-Yield Onboarding Action Link -->
-            <a 
-                href="/start-project" 
-                class="px-5 py-2.5 bg-brand-primary hover:bg-opacity-90 text-white font-bold rounded-xl transition-all tracking-widest uppercase text-[10px] shadow-md cursor-pointer"
-            >
-                Start Project
-            </a>
+        <!-- Navigation -->
+        <div class="flex items-center gap-4 sm:gap-6 text-sm text-zinc-400 font-medium font-mono text-xs">
+          <a href="/projects" class="hover:text-white transition-colors">Projects</a>
+          
+          <!-- Company Profile PDF Download -->
+          <a 
+            href="/company-profile.pdf" 
+            download
+            class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary rounded-xl transition-all text-[10px] font-bold tracking-widest uppercase border border-brand-primary/20 hover:border-brand-primary/40"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            Profile
+          </a>
+          
+          <!-- Call Button (Mobile) -->
+          <a 
+            href="tel:+919611104445" 
+            class="sm:hidden inline-flex items-center gap-1.5 px-3 py-2 bg-brand-primary/20 hover:bg-brand-primary/30 text-brand-secondary rounded-xl transition-all text-[10px] font-bold tracking-widest uppercase"
+            aria-label="Call us"
+          >
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Call
+          </a>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-		<!-- Main Render Slot -->
-		<main class="min-h-screen">
-			<slot />
-		</main>
+    <!-- Main Content -->
+    <main class="min-h-screen">
+      <slot />
+    </main>
 
-		<!-- Footer -->
-		<footer class="bg-brand-dark border-t border-brand-border py-12 px-6 text-xs text-zinc-600">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        
-        <!-- Left Column: Copyright Anchor -->
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12 px-6 text-xs text-zinc-600">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <p class="order-3 md:order-1 text-zinc-500">
-            © 2026 Avakkai Studio. All rights reserved.
+          © 2026 Avakkai Studio. All rights reserved.
         </p>
         
-        <!-- Center Column: Integrated Social Channels -->
         <div class="flex items-center gap-6 font-mono tracking-wider uppercase text-[11px] order-1 md:order-2">
-            <a 
-                href="https://www.youtube.com/@Avakkai.Studio" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="hover:text-white transition-colors"
-            >
-                YouTube
-            </a>
-            <span class="text-brand-border">/</span>
-            <a 
-                href="https://www.instagram.com/avakkaifilms/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="hover:text-white transition-colors"
-            >
-                Instagram
-            </a>
-            <span class="text-brand-border">/</span>
-            <a 
-                href="https://in.linkedin.com/in/ashvin-naidu-a1a46615" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="hover:text-white transition-colors"
-            >
-                LinkedIn
-            </a>
+          <a 
+            href="https://www.youtube.com/@Avakkai.Studio" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="hover:text-white transition-colors"
+          >
+            YouTube
+          </a>
+          <span class="text-brand-border">/</span>
+          <a 
+            href="https://www.instagram.com/avakkaifilms/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="hover:text-white transition-colors"
+          >
+            Instagram
+          </a>
+          <span class="text-brand-border">/</span>
+          <a 
+            href="https://in.linkedin.com/in/ashvin-naidu-a1a46615" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="hover:text-white transition-colors"
+          >
+            LinkedIn
+          </a>
         </div>
         
-        <!-- Right Column: Studio Value Pillars -->
         <p class="font-mono tracking-widest uppercase text-[10px] text-zinc-400 order-2 md:order-3">
-            Taste • Strategy • Scale
+          Taste • Strategy • Scale
         </p>
-        
-    </div>
-</footer>
-	</body>
+      </div>
+    </footer>
+  </body>
 </html>
