@@ -1,4 +1,5 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection} from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 
 const projects = defineCollection({
@@ -12,6 +13,7 @@ const projects = defineCollection({
     youtubeIds: z.array(z.string()).optional(),
     featured: z.boolean().default(false),
     highlight: z.string().optional(),
+    cardImage: z.string().optional(),
     tags: z.array(z.string()).default([]),
     date: z.string().optional(),
   }),

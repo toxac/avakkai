@@ -1,5 +1,5 @@
 // src/components/ProjectViewer.jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function ProjectViewer({ initialProjects }) {
   const [activeCategory, setActiveCategory] = useState('ALL');

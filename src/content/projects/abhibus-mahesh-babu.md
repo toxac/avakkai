@@ -4,6 +4,7 @@ client: "AbhiBus"
 category: "TV Commercial"
 description: "Avakkai Studio produced a two-film celebrity TVC campaign featuring Telugu cinema superstar Mahesh Babu for AbhiBus, India's leading online bus ticketing platform. The high-production commercials leveraged Mahesh Babu's mass appeal and trusted screen presence to establish brand credibility, drive user acquisition, and position AbhiBus as the go-to OTA for hassle-free bus travel. Shot in a single day at Ramoji Film City with innovative chroma-floor techniques, the campaign delivered three comedy-led films and a teaser that seamlessly blended star power with creative storytelling."
 youtubeId: "KZ6hnQjFgNI"
+cardImage: "abhibus-mahesh-babu.jpg"
 youtubeIds: ["KZ6hnQjFgNI", "PP0mwwfNDdA"]
 featured: false
 highlight: "Telugu superstar Mahesh Babu | 2-film campaign | Single-day shoot at Ramoji Film City"
