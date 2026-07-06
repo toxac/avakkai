@@ -12,6 +12,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  site: 'https://avakkai.studio',
 
   integrations: [sitemap(), react()]
 });
