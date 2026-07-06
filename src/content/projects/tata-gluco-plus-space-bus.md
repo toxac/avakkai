@@ -1,7 +1,7 @@
 ---
 title: "Tata Gluco+ — 'Space Bus' Film"
 client: "Tata Consumer Products"
-category: "TV Commercial"
+category: ["TV Commercial", "Campaign"]
 description: "Avakkai Studio produced a satirical sci-fi comedy for Tata Gluco+ featuring a 50-foot custom-built space bus interior and a motorised miniature rocket — all constructed practically in a Chennai studio. The film follows an alien youth crew stranded on a dead spacebus who down Tata Gluco+, churn the wheels back to life, and launch into the cosmos. No shortcuts, no stock footage — just real mechanics, real scale, and real production craft. The punchline earned it: 'This story has a lot of gas, but Tata Gluco+ is Gas Minus, Energy Plus.'"
 youtubeId: "AsbntijPZQ"
 cardImage: "gluco-plus-space-bus.png"

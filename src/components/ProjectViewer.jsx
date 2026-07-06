@@ -4,25 +4,20 @@ import { useState } from 'react';
 export default function ProjectViewer({ initialProjects }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
   
-  // Get unique categories from actual project data
-  const allCategories = initialProjects.map(p => p.data.category);
+  // Get unique categories from actual project data (flatten the array)
+  const allCategories = initialProjects.flatMap(p => p.data.category);
   const uniqueCategories = ['ALL', ...new Set(allCategories)];
 
   const filteredProjects = activeCategory === 'ALL'
     ? initialProjects
-    : initialProjects.filter(p => p.data.category === activeCategory);
+    : initialProjects.filter(p => p.data.category.includes(activeCategory));
 
   // Helper function to get image path
   const getImagePath = (project) => {
     if (project.data.cardImage) {
-      // Use the filename from frontmatter
       return `/images/projects/${project.data.cardImage}`;
     }
-    // Fallback: try to match by project id with common extensions
-    const id = project.id;
-    const extensions = ['.jpg', '.png', '.webp'];
-    // Return a path that will be checked by the onError handler
-    return `/images/projects/${id}.jpg`;
+    return `/images/projects/${project.id}.jpg`;
   };
 
   return (
@@ -47,7 +42,6 @@ export default function ProjectViewer({ initialProjects }) {
       {/* Grid Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => {
-          // Build card image path
           let cardImagePath = getImagePath(project);
           
           return (
@@ -57,7 +51,6 @@ export default function ProjectViewer({ initialProjects }) {
               className="group bg-brand-card border border-brand-border rounded-2xl overflow-hidden transition-all duration-300 hover:border-brand-secondary flex flex-col justify-between cursor-pointer no-underline"
             >
               <div>
-                {/* Aspect Ratio 16:9 Image Card */}
                 <div className="relative aspect-video bg-black overflow-hidden">
                   <img 
                     src={cardImagePath}
@@ -65,7 +58,6 @@ export default function ProjectViewer({ initialProjects }) {
                     className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105"
                     loading="lazy"
                     onError={(e) => {
-                      // Try alternative extensions if image fails to load
                       const img = e.target;
                       const currentSrc = img.src;
                       const basePath = currentSrc.substring(0, currentSrc.lastIndexOf('.'));
@@ -74,14 +66,12 @@ export default function ProjectViewer({ initialProjects }) {
                       const extensions = ['.jpg', '.png', '.webp'];
                       const currentIndex = extensions.indexOf(currentExt);
                       
-                      // If current extension failed, try the next one
                       if (currentIndex !== -1 && currentIndex < extensions.length - 1) {
                         const nextExt = extensions[currentIndex + 1];
                         img.src = basePath + nextExt;
                         return;
                       }
                       
-                      // If all extensions fail, show fallback
                       img.style.display = 'none';
                       const parent = img.parentElement;
                       const fallback = document.createElement('div');
@@ -96,7 +86,6 @@ export default function ProjectViewer({ initialProjects }) {
                     }}
                   />
                   
-                  {/* Play icon overlay on hover */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/40">
                     <div className="w-16 h-16 rounded-full bg-brand-primary/90 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                       <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -108,10 +97,17 @@ export default function ProjectViewer({ initialProjects }) {
 
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-3 flex-wrap">
+                    {/* Display first category as primary */}
                     <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 bg-brand-dark border border-brand-border text-brand-secondary rounded">
-                      {project.data.category}
+                      {project.data.category[0]}
                     </span>
-                    {project.data.tags && project.data.tags.slice(0, 3).map((tag, i) => (
+                    {/* Display additional categories as badges */}
+                    {project.data.category.slice(1).map((cat) => (
+                      <span key={cat} className="text-[9px] font-mono uppercase tracking-wider px-2 py-0.5 bg-brand-dark/50 border border-brand-border/50 text-zinc-400 rounded">
+                        {cat}
+                      </span>
+                    ))}
+                    {project.data.tags && project.data.tags.slice(0, 2).map((tag, i) => (
                       <span key={i} className="text-xs text-zinc-500 font-light">#{tag}</span>
                     ))}
                   </div>
@@ -122,7 +118,6 @@ export default function ProjectViewer({ initialProjects }) {
                 </div>
               </div>
 
-              {/* Strategy Outcome Panel */}
               <div className="border-t border-brand-border p-5 bg-brand-dark/50 grid grid-cols-2 gap-4 text-xs font-mono">
                 <div>
                   <span className="text-zinc-500 block uppercase text-[9px] tracking-wider">Highlight</span>
@@ -133,7 +128,7 @@ export default function ProjectViewer({ initialProjects }) {
                 <div>
                   <span className="text-zinc-500 block uppercase text-[9px] tracking-wider">Category</span>
                   <span className="text-zinc-300 font-semibold mt-0.5 block truncate">
-                    {project.data.category}
+                    {project.data.category.join(' • ')}
                   </span>
                 </div>
               </div>

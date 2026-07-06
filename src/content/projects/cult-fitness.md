@@ -1,7 +1,7 @@
 ---
 title: "Cult.fit — 'Never Again Sale' Campaign (2 Films)"
 client: "Cult.fit"
-category: "Digital Film"
+category: ["Digital Film", "Campaign"]
 description: "Avakkai Studio produced two cult-style digital comedy films for Cult.fit's End of Season Sale, blending Bollywood energy, sharp humour, and fitness brand identity. The campaign parodied FOMO-driven urgency through two distinct creative approaches — a high-fashion gym chaos film and a full Bollywood parody with choreographed melodrama. Shot in a single day with pre-composed music driving every beat, the films delivered laughter and call-to-action in the same moment, positioning Cult.fit as a brand that doesn't take itself too seriously while driving massive engagement."
 youtubeId: "uuSAij6Gag0"
 youtubeIds: ["uSdatu0rjr8"]

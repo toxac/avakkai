@@ -1,7 +1,7 @@
 ---
 title: "The Stand Up Project — Social Awareness Film"
 client: "Avakkai Studio (Self-Initiated)"
-category: "Social Awareness"
+category: ["Social Awareness"] 
 description: "Avakkai Films, now Avakkai Studio, launched 'The Stand Up Project' on the International Day of Persons with Disabilities. This powerful social awareness film redefines patriotism by challenging society to stand up for the differently-abled. Featuring nine real-life super-achievers with disabilities, the film shifts the narrative around mandatory standing for the national anthem to a broader call for inclusion, accessibility, and empathy. With a soul-stirring original soundtrack by Rahul Dev Nath and Navin Kumar, the project became a landmark piece of purpose-driven storytelling."
 youtubeId: "LdmCsCH63zE"
 youtubeIds: ["h7C_qHV_GUQ", "LdmCsCH63zE" ]

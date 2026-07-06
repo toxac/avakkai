@@ -1,7 +1,7 @@
 ---
 title: "TVS Motors — Africa & Egypt Portfolio Campaign"
 client: "TVS Motor Company"
-category: "Digital Film"
+category: ["TV Commercial", "Campaign","Digital Film"]
 description: "Avakkai Studio delivered a portfolio of broadcast-quality films for TVS Motors across African and Egyptian markets — including the Neo AMI launch, HLX 10-year anniversary, HLX 150F Egypt launch, Eid Mubarak campaign, and Team Melli sponsorship comedy. Through strategic casting of regional talent, in-camera LED wall environments, and a single coordinated production team, the campaigns achieved authentic local feel with Indian production efficiency. Five distinct markets, one production intelligence."
 youtubeId: "vQDM4tFyiOU"
 youtubeIds: ["6DKQh_zXSt8", "L58Fve5Lzus", "nPbCrNbfxH4", "c_RSwfrwLfo"]

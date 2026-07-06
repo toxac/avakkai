@@ -1,7 +1,7 @@
 ---
 title: "TVS Iran — Team Melli Sponsorship Film"
 client: "TVS Motor Company"
-category: "Digital Film"
+category: ["TV Commercial", "Campaign","Digital Film"]
 description: "Avakkai Studio produced a two-film comedy campaign for TVS Iran celebrating their sponsorship of Team Melli. Shot in Bangalore with Iranian talent, the films explore football superstition — every fan's belief in rituals that guarantee a win, stretched to delightfully unhinged extremes. With two days of workshopping to build rhythm and timing across the language gap, the campaign delivered authentic, universal humour that transcends translation, landing as a celebration of fandom itself."
 youtubeId: ""
 featured: false

@@ -1,7 +1,7 @@
 ---
 title: "Tata Gluco Jelly — The Bounce Film"
 client: "Tata Consumer Products"
-category: "TV Commercial"
+category: ["TV Commercial", "Campaign"]
 description: "Avakkai Studio produced a high-energy launch TVC for Tata Gluco+ Jelly that brought a wacky concept to life — a world where everything bounces. Shot in Hyderabad with a professional stunt team, the entire bounce sequence was executed live on a real street transformed by 15 days of production design. With no CGI used, the film relied on industrial cranes, bungee rigs, and two days of rehearsals to sync cast, stunt riggers, crane operators, and camera. The result: a cinematic product launch that earned 16M+ impressions by delivering genuine energy instead of slapstick comedy."
 youtubeId: "F_pRkYpZHm0"
 cardImage: "tata-gluco-jelly.png"

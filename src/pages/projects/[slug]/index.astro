@@ -20,7 +20,7 @@ const hasPlaylist = project.data.youtubeIds && project.data.youtubeIds.length > 
 const playlistVideos = project.data.youtubeIds || [];
 
 // Use project description for SEO or fallback to default
-const pageDescription = project.data.description || `Watch ${project.data.title} — a ${project.data.category} produced by Avakkai Studio for ${project.data.client}.`;
+const pageDescription = project.data.description || `Watch ${project.data.title} — a ${project.data.category.join(', ')} produced by Avakkai Studio for ${project.data.client}.`;
 ---
 
 <Layout title={`${project.data.title} — Avakkai Studio`} description={pageDescription}>
@@ -49,9 +49,12 @@ const pageDescription = project.data.description || `Watch ${project.data.title}
       {/* Header */}
       <div class="mb-12">
         <div class="flex items-center gap-3 mb-4 flex-wrap">
-          <span class="text-[10px] font-mono uppercase tracking-wider px-3 py-1 bg-brand-card border border-brand-border text-brand-secondary rounded">
-            {project.data.category}
-          </span>
+          {/* Display all categories as badges */}
+          {project.data.category.map((cat) => (
+            <span class="text-[10px] font-mono uppercase tracking-wider px-3 py-1 bg-brand-card border border-brand-border text-brand-secondary rounded">
+              {cat}
+            </span>
+          ))}
           {project.data.tags && project.data.tags.map((tag) => (
             <span class="text-xs text-zinc-500 font-light">#{tag}</span>
           ))}
@@ -116,7 +119,7 @@ const pageDescription = project.data.description || `Watch ${project.data.title}
       {/* Back Navigation */}
       <div class="mt-16 pt-8 border-t border-brand-border">
         <a 
-          href="/#work" 
+          href="/projects" 
           class="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors font-mono text-sm"
         >
           ← Back to all work

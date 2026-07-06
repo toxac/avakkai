@@ -1,7 +1,7 @@
 ---
 title: "TVS Neo AMI — Africa Launch Film"
 client: "TVS Motor Company"
-category: "Digital Film"
+category: ["TV Commercial", "Campaign","Digital Film"]
 description: "Avakkai Studio produced a launch film for TVS Neo AMI, a new-age tech-loaded scooter built for Africa's Gen Z riders. Shot in a Bangalore studio against a 14-foot LED wall, the mixed-media film combined quick-cut visual storytelling with in-camera art-directed environments. Developed direct-to-client, the brand identity, tagline, and tech-forward visual language were originated for the African market — not adapted from elsewhere. The result: a scooter introduced as a piece of tech that happens to ride, speaking Gen Z Africa's visual language."
 youtubeId: "vQDM4tFyiOU"
 cardImage: "tvs-neo-ami-africa.png"
