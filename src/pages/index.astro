@@ -333,7 +333,9 @@ const brands = [
   </section>
 
   <!-- CULTURAL IMPACT SECTION -->
-  <section class="bg-brand-dark py-32 text-white relative overflow-hidden">
+  <section
+    class="bg-brand-dark py-16 sm:py-24 lg:py-32 text-white relative overflow-hidden"
+  >
     <div class="absolute inset-0 opacity-5 pointer-events-none">
       <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
       <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
@@ -342,29 +344,31 @@ const brands = [
 
     <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
       <div
-        class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+        class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start"
       >
         <!-- Left Column: Main Content -->
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 mb-2">
+        <div class="lg:col-span-7 space-y-4 sm:space-y-6">
+          <div class="inline-flex items-center gap-2 mb-1 sm:mb-2">
             <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"
             ></span>
             <p
-              class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold"
+              class="text-brand-secondary text-[10px] sm:text-xs tracking-widest uppercase font-body font-semibold"
             >
               Cultural Impact
             </p>
           </div>
 
           <h3
-            class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white"
+            class="text-3xl sm:text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white"
           >
             "Reached <span class="text-brand-secondary italic font-normal"
               >16 million views</span
             > in under 24 hours."
           </h3>
 
-          <p class="text-zinc-400 font-light text-lg leading-relaxed max-w-xl">
+          <p
+            class="text-zinc-400 text-base sm:text-lg leading-relaxed max-w-xl"
+          >
             That's the power of a story told with absolute intention. Our <span
               class="text-white font-medium">Stand Up</span
             > social awareness campaign proved that purposeful filmmaking moves cultural
@@ -376,23 +380,26 @@ const brands = [
         <div class="lg:col-span-5">
           <div class="lg:pl-6">
             <p
-              class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium"
+              class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-4 sm:mb-6 font-body font-medium"
             >
               Official Showcases & Honors
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
+            <!-- Awards as row on mobile, column on desktop -->
+            <div class="grid grid-cols-3 lg:grid-cols-1 gap-4 sm:gap-6">
               <!-- Award 1 -->
               <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+                class="group border-l border-brand-border pl-3 sm:pl-4 hover:border-brand-secondary transition-all duration-300"
               >
                 <p
-                  class="text-white font-bold text-base tracking-tight font-display"
+                  class="text-white font-bold text-sm sm:text-base tracking-tight font-display"
                 >
                   Silver Abby
                 </p>
-                <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
+                <p class="text-zinc-500 text-[10px] sm:text-xs mt-0.5">
+                  Goafest
+                </p>
                 <p
-                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                  class="text-brand-secondary font-semibold font-body text-[8px] sm:text-[10px] tracking-wider uppercase mt-1 sm:mt-2"
                 >
                   Winner 2017
                 </p>
@@ -400,16 +407,18 @@ const brands = [
 
               <!-- Award 2 -->
               <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+                class="group border-l border-brand-border pl-3 sm:pl-4 hover:border-brand-secondary transition-all duration-300"
               >
                 <p
-                  class="text-white font-bold text-base tracking-tight font-display"
+                  class="text-white font-bold text-sm sm:text-base tracking-tight font-display"
                 >
                   Kyoorius
                 </p>
-                <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
+                <p class="text-zinc-500 text-[10px] sm:text-xs mt-0.5">
+                  Creative Review
+                </p>
                 <p
-                  class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2"
+                  class="text-zinc-400 font-medium font-body text-[8px] sm:text-[10px] tracking-wider uppercase mt-1 sm:mt-2"
                 >
                   Shortlisted
                 </p>
@@ -417,16 +426,18 @@ const brands = [
 
               <!-- Award 3 -->
               <div
-                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+                class="group border-l border-brand-border pl-3 sm:pl-4 hover:border-brand-secondary transition-all duration-300"
               >
                 <p
-                  class="text-white font-bold text-base tracking-tight font-display"
+                  class="text-white font-bold text-sm sm:text-base tracking-tight font-display"
                 >
                   3 Elephants
                 </p>
-                <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
+                <p class="text-zinc-500 text-[10px] sm:text-xs mt-0.5">
+                  In-Book Showcase
+                </p>
                 <p
-                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                  class="text-brand-secondary font-semibold font-body text-[8px] sm:text-[10px] tracking-wider uppercase mt-1 sm:mt-2"
                 >
                   Kyoorius 2017
                 </p>

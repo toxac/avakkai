@@ -1,9 +1,22 @@
 // src/components/ProjectViewer.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ProjectViewer({ initialProjects }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
   const [showAll, setShowAll] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile (client-side only)
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Get unique categories from actual project data (flatten the array)
   const allCategories = initialProjects.flatMap(p => p.data.category);
@@ -14,9 +27,12 @@ export default function ProjectViewer({ initialProjects }) {
     ? initialProjects
     : initialProjects.filter(p => p.data.category.includes(activeCategory));
 
-  // Determine which projects to show
+  // Determine which projects to show - only limit on mobile
   const INITIAL_DISPLAY = 5;
-  const visibleProjects = showAll 
+  
+  // On desktop: show all projects
+  // On mobile: show only 5 unless showAll is true
+  const displayProjects = (!isMobile || showAll) 
     ? filteredProjects 
     : filteredProjects.slice(0, INITIAL_DISPLAY);
   
@@ -90,7 +106,7 @@ export default function ProjectViewer({ initialProjects }) {
 
       {/* Grid Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {visibleProjects.map((project) => {
+        {displayProjects.map((project) => {
           let cardImagePath = getImagePath(project);
           
           return (
@@ -186,9 +202,9 @@ export default function ProjectViewer({ initialProjects }) {
         })}
       </div>
 
-      {/* Show More / Show Less Button - Only visible on mobile when there are more projects */}
-      {hasMoreProjects && (
-        <div className="mt-8 text-center sm:hidden">
+      {/* Show More / Show Less Button - Only on mobile and when there are more projects */}
+      {isMobile && hasMoreProjects && (
+        <div className="mt-8 text-center">
           <button
             onClick={toggleShowAll}
             className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary font-bold text-sm tracking-widest uppercase rounded-xl border border-brand-primary/20 hover:border-brand-primary/40 transition-all"
