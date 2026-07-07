@@ -63,6 +63,9 @@ export default function ProjectViewer({ initialProjects }) {
       <div className="mb-12">
         {/* Mobile: Dropdown */}
         <div className="block sm:hidden">
+          <label htmlFor="category-select" className="sr-only">
+            Filter projects by category
+          </label>
           <select
             value={activeCategory}
             onChange={handleCategoryChange}
