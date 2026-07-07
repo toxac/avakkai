@@ -12,27 +12,83 @@ const { title, description = "Premium commercial and film production — Avakkai
 <!doctype html>
 <html lang="en" class="bg-brand-dark text-zinc-100 scroll-smooth">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
-    <!-- Open Graph / Social Media Meta -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-    <title>{title}</title>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  
+  <!-- Open Graph / Social Media Meta -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={Astro.url.href} />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  
+  <!-- PRELOAD CRITICAL RESOURCES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- CRITICAL CSS (INLINE - Above the fold) -->
+  <style>
+    /* Critical styles - only what's needed for above the fold */
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background-color:#07040a;color:#f4f4f5;scroll-behavior:smooth}
+    h1,h2,h3,h4,.font-display{font-family:'Space Grotesk','Inter',sans-serif;letter-spacing:-0.025em}
+    .bg-brand-dark{background-color:#07040a}
+    .bg-brand-card{background-color:#120b1e}
+    .text-brand-secondary{color:#f4c022}
+    .text-white{color:#fff}
+    .text-zinc-300{color:#d4d4d8}
+    .text-zinc-400{color:#a1a1aa}
+    .text-zinc-500{color:#71717a}
+    .border-brand-border{border-color:#211633}
+    .max-w-7xl{max-width:80rem}
+    .mx-auto{margin-left:auto;margin-right:auto}
+    .px-6{padding-left:1.5rem;padding-right:1.5rem}
+    .py-4{padding-top:1rem;padding-bottom:1rem}
+    .flex{display:flex}
+    .items-center{align-items:center}
+    .justify-between{justify-content:space-between}
+    .w-full{width:100%}
+    .fixed{position:fixed}
+    .top-0{top:0}
+    .z-50{z-index:50}
+    .backdrop-blur-md{backdrop-filter:blur(12px)}
+    .min-h-screen{min-height:100vh}
+    .relative{position:relative}
+    .overflow-hidden{overflow:hidden}
+    .absolute{position:absolute}
+    .inset-0{inset:0}
+  </style>
+  
+  <!-- DEFER NON-CRITICAL CSS -->
+  <link 
+    rel="preload" 
+    href="/_astro/global.css" 
+    as="style" 
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="/_astro/global.css" />
+  </noscript>
+  
+  <!-- FONTS - Load asynchronously -->
+  <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" 
+    media="print" 
+    onload="this.media='all'; this.onload=null;"
+  />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" />
+  </noscript>
+  
+  <title>{title}</title>
+</head>
   <body class="font-sans selection:bg-spice-red selection:text-white overflow-x-hidden antialiased">
     <!-- Navbar -->
     <nav class="w-full fixed top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-brand-border px-6 py-4">

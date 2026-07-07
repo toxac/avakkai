@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ProjectViewer from "../components/ProjectViewer.jsx";
 import { getCollection } from "astro:content";
 
-const liveProjects = await getCollection("projects");
+const finalProjects = await getCollection("projects");
 import ashvinImage from "../assets/images/ashvin.png";
 
 const brands = [
@@ -21,71 +21,11 @@ const brands = [
   "Pepsico",
   "UniverCell",
 ];
-
-const fallbackProjects = [
-  {
-    data: {
-      title: "Tata Gluco Jelly: Gravity Defying Bounce",
-      client: "Tata Consumer Products",
-      category: "TV Commercial",
-      tags: ["Practical Effects", "Live Stunts"],
-      youtubeId: "F_pRkYpZHm0",
-      metricValue: "Zero CG",
-      metricLabel: "Mammoth Live Stunt Production",
-    },
-  },
-  {
-    data: {
-      title: "Cult.fit: End of Season Sale",
-      client: "Cult",
-      category: "TV Commercial",
-      tags: ["Humour", "Fitness"],
-      youtubeId: "uSdatu0rjr8",
-      metricValue: "High Conversion",
-      metricLabel: "Cult-Classic Directorial Style",
-    },
-  },
-  {
-    data: {
-      title: "Gatorade: Teacher's Day Tribute",
-      client: "Gatorade (feat. PV Sindhu)",
-      category: "Independent Film",
-      tags: ["Social Awareness", "Rapid Turnaround"],
-      youtubeId: "BMxjBdqkpy0",
-      metricValue: "24-Hr Window",
-      metricLabel: "Shot Post-London Silver Victory",
-    },
-  },
-  {
-    data: {
-      title: "Gone Mad: Precision Sync Shoot",
-      client: "Gone Mad",
-      category: "TV Commercial",
-      tags: ["Choreography", "Pre-composed Music"],
-      youtubeId: "7i2E_hDZaec",
-      metricValue: "1-Day Shoot",
-      metricLabel: "Zero-Latency Pre-rehearsed Cast",
-    },
-  },
-  {
-    data: {
-      title: "TVS Neo AMI: African Continental Launch",
-      client: "TVS Motor Company",
-      category: "Film",
-      tags: ["Global Scale", "Localization"],
-      youtubeId: "vQDM4tFyiOU",
-      metricValue: "Multi-Region",
-      metricLabel: "Recreated Locales & Native Casting",
-    },
-  },
-];
-
-const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
 ---
 
 <Layout title="Avakkai Studio — TV & Digital Ad Production">
   <section
-    class="relative min-h-screen flex flex-col justify-center overflow-hidden bg-brand-dark"
+    class="relative flex flex-col justify-center overflow-hidden bg-brand-dark"
   >
     <div class="absolute inset-0 z-0 overflow-hidden">
       <div
@@ -98,27 +38,32 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
         muted
         loop
         playsinline
-        preload="auto"
+        preload="none"
+        poster="/images/hero-poster.webp"
         class="w-full h-full object-cover scale-[1.02] filter brightness-[0.5] contrast-[1.05]"
       >
+        <source src="/video/hero.webm" type="video/webm" />
         <source src="/video/hero.mp4" type="video/mp4" />
       </video>
     </div>
 
     <div
-      class="relative w-full max-w-7xl mx-auto px-6 lg:px-10 py-32 z-20 mt-12 flex flex-col justify-between h-full"
+      class="relative w-full max-w-7xl mx-auto px-6 lg:px-10 z-20 flex flex-col justify-center"
     >
+      <!-- Top padding: controls space from navbar -->
+      <div class="pt-24 sm:pt-24 lg:pt-32"></div>
+
       <div class="max-w-3xl">
-        <div class="mb-6">
+        <div class="mb-2 sm:mb-4 lg:mb-6">
           <p
-            class="text-brand-secondary text-xs tracking-[0.3em] uppercase font-body font-bold"
+            class="text-brand-secondary text-[8px] sm:text-[10px] lg:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase font-body font-bold"
           >
-            TV Ads · Digital Films · Campaigns
+            TV Commercials · Digital Films · Campaigns
           </p>
         </div>
 
         <h1
-          class="text-5xl md:text-8xl font-black text-white leading-[0.95] tracking-tight mb-8 font-display"
+          class="text-5xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] tracking-tight mb-3 sm:mb-5 lg:mb-8 font-display"
         >
           Films that move<br />
           <span class="text-brand-secondary italic font-normal font-display"
@@ -127,91 +72,83 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
           and metrics.
         </h1>
 
+        <!-- More prominent description -->
         <p
-          class="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-xl mb-10 font-light"
+          class="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed max-w-xl font-medium text-zinc-200"
         >
-          25 years of storytelling across TV and digital. From Tata to Gatorade
-          to Kingfisher — we produce high-impact ads that scale brand identity.
+          25 years of storytelling across TV and digital — crafting premium
+          films, commercials, and branded content that move audiences and drive
+          results.
         </p>
-
-        <div
-          class="flex flex-col sm:flex-row gap-4 items-start sm:items-center"
-        >
-          <a
-            href="#work"
-            class="group inline-flex items-center gap-3 bg-brand-primary hover:bg-opacity-90 text-white px-8 py-4 text-sm font-semibold transition-all shadow-xl"
-          >
-            See Our Work
-            <span class="group-hover:translate-x-1 transition-transform">→</span
-            >
-          </a>
-          <a
-            href="#contact"
-            class="inline-flex items-center gap-2 border border-white/30 hover:border-white hover:bg-white/5 text-white px-8 py-4 text-sm font-medium transition-colors backdrop-blur-sm"
-          >
-            Get in Touch
-          </a>
-        </div>
       </div>
 
+      <!-- Stats Grid -->
       <div
-        class="grid grid-cols-2 md:grid-cols-4 gap-8 text-white mt-20 pt-10 border-t border-brand-border/40 max-w-5xl"
+        class="grid grid-cols-3 gap-2 sm:gap-6 lg:gap-8 text-white mt-6 sm:mt-12 lg:mt-20 pt-4 sm:pt-6 lg:pt-10 border-t border-brand-border/40 max-w-2xl"
       >
-        <div class="border-r border-brand-border/30 last:border-0">
+        <div>
           <p
-            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
-          >
-            100+
-          </p>
-          <p
-            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
-          >
-            Films Produced
-          </p>
-        </div>
-        <div class="border-r border-brand-border/30 last:border-0">
-          <p
-            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
-          >
-            75+
-          </p>
-          <p
-            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
-          >
-            Brands Served
-          </p>
-        </div>
-        <div class="border-r border-brand-border/30 last:border-0">
-          <p
-            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+            class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black font-display text-brand-secondary"
           >
             25+
           </p>
           <p
-            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+            class="text-[9px] sm:text-[10px] lg:text-xs uppercase tracking-widest mt-0.5 font-body text-zinc-300 font-semibold"
           >
             Years of Craft
           </p>
         </div>
-        <div>
+        <div class="text-center">
           <p
-            class="text-4xl md:text-5xl font-black font-display text-brand-secondary"
+            class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black font-display text-brand-secondary"
+          >
+            75+
+          </p>
+          <p
+            class="text-[9px] sm:text-[10px] lg:text-xs uppercase tracking-widest mt-0.5 font-body text-zinc-300 font-semibold"
+          >
+            Brands Served
+          </p>
+        </div>
+        <div class="text-right">
+          <p
+            class="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black font-display text-brand-secondary"
           >
             10+
           </p>
           <p
-            class="text-[10px] uppercase tracking-widest mt-1 font-body text-zinc-400 font-medium"
+            class="text-[9px] sm:text-[10px] lg:text-xs uppercase tracking-widest mt-0.5 font-body text-zinc-300 font-semibold"
           >
             Industry Awards
           </p>
         </div>
       </div>
+
+      <!-- Bottom padding: controls space before next section -->
+      <div class="pb-12 sm:pb-16 lg:pb-20"></div>
     </div>
 
     <div
       class="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-brand-primary via-brand-border to-transparent"
     >
     </div>
+  </section>
+
+  <section id="work" class="py-28 px-6 max-w-7xl mx-auto">
+    <div class="mb-16">
+      <p
+        class="text-brand-secondary text-xs tracking-[0.25em] uppercase font-body font-semibold mb-3"
+      >
+        Selected Portfolio
+      </p>
+      <h2
+        class="text-4xl md:text-6xl font-bold font-display tracking-tight text-white"
+      >
+        Stories we've told.
+      </h2>
+    </div>
+
+    <ProjectViewer client:visible initialProjects={finalProjects} />
   </section>
 
   <!-- BRAND MARQUEE SECTION -->
@@ -330,23 +267,6 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
     </div>
   </section>
 
-  <section id="work" class="py-28 px-6 max-w-7xl mx-auto">
-    <div class="mb-16">
-      <p
-        class="text-brand-secondary text-xs tracking-[0.25em] uppercase font-body font-semibold mb-3"
-      >
-        Selected Portfolio
-      </p>
-      <h2
-        class="text-4xl md:text-6xl font-bold font-display tracking-tight text-white"
-      >
-        Stories we've told.
-      </h2>
-    </div>
-
-    <ProjectViewer client:load initialProjects={finalProjects} />
-  </section>
-
   <!-- ABOUT SECTION WITH IMAGE ARCHITECTURE -->
   <section
     id="about"
@@ -413,79 +333,110 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
   </section>
 
   <!-- CULTURAL IMPACT SECTION -->
-  <!-- CULTURAL IMPACT SECTION -->
-<section class="bg-brand-dark py-32 text-white relative overflow-hidden">
-  <div class="absolute inset-0 opacity-5 pointer-events-none">
-    <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
-    <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
-    <div class="absolute top-0 left-3/4 w-[1px] h-full bg-white"></div>
-  </div>
+  <section class="bg-brand-dark py-32 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-[1px] h-full bg-white"></div>
+      <div class="absolute top-0 left-2/4 w-[1px] h-full bg-white"></div>
+      <div class="absolute top-0 left-3/4 w-[1px] h-full bg-white"></div>
+    </div>
 
-  <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-      <!-- Left Column: Main Content -->
-      <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 mb-2">
-          <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-          <p class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold">
-            Cultural Impact
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+      >
+        <!-- Left Column: Main Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 mb-2">
+            <span class="w-2 h-2 rounded-full bg-brand-primary animate-pulse"
+            ></span>
+            <p
+              class="text-brand-secondary text-xs tracking-widest uppercase font-body font-semibold"
+            >
+              Cultural Impact
+            </p>
+          </div>
+
+          <h3
+            class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white"
+          >
+            "Reached <span class="text-brand-secondary italic font-normal"
+              >16 million views</span
+            > in under 24 hours."
+          </h3>
+
+          <p class="text-zinc-400 font-light text-lg leading-relaxed max-w-xl">
+            That's the power of a story told with absolute intention. Our <span
+              class="text-white font-medium">Stand Up</span
+            > social awareness campaign proved that purposeful filmmaking moves cultural
+            metrics—not just audiences.
           </p>
         </div>
 
-        <h3 class="text-4xl md:text-6xl font-black font-display leading-[1.05] tracking-tight text-white">
-          "Reached <span class="text-brand-secondary italic font-normal">16 million views</span> in under 24 hours."
-        </h3>
+        <!-- Right Column: Awards & Honors -->
+        <div class="lg:col-span-5">
+          <div class="lg:pl-6">
+            <p
+              class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium"
+            >
+              Official Showcases & Honors
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
+              <!-- Award 1 -->
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  Silver Abby
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
+                <p
+                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Winner 2017
+                </p>
+              </div>
 
-        <p class="text-zinc-400 font-light text-lg leading-relaxed max-w-xl">
-          That's the power of a story told with absolute intention. Our <span class="text-white font-medium">Stand Up</span> social awareness campaign proved that purposeful filmmaking moves cultural metrics—not just audiences.
-        </p>
-      </div>
+              <!-- Award 2 -->
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  Kyoorius
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
+                <p
+                  class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Shortlisted
+                </p>
+              </div>
 
-      <!-- Right Column: Awards & Honors -->
-      <div class="lg:col-span-5">
-        <div class="lg:pl-6">
-          <p class="text-[10px] uppercase tracking-[0.3em] text-zinc-500 mb-6 font-body font-medium">
-            Official Showcases & Honors
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6">
-            <!-- Award 1 -->
-            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
-              <p class="text-white font-bold text-base tracking-tight font-display">
-                Silver Abby
-              </p>
-              <p class="text-zinc-500 text-xs mt-0.5">Goafest</p>
-              <p class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2">
-                Winner 2017
-              </p>
-            </div>
-
-            <!-- Award 2 -->
-            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
-              <p class="text-white font-bold text-base tracking-tight font-display">
-                Kyoorius
-              </p>
-              <p class="text-zinc-500 text-xs mt-0.5">Creative Review</p>
-              <p class="text-zinc-400 font-medium font-body text-[10px] tracking-wider uppercase mt-2">
-                Shortlisted
-              </p>
-            </div>
-
-            <!-- Award 3 -->
-            <div class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300">
-              <p class="text-white font-bold text-base tracking-tight font-display">
-                3 Elephants
-              </p>
-              <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
-              <p class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2">
-                Kyoorius 2017
-              </p>
+              <!-- Award 3 -->
+              <div
+                class="group border-l border-brand-border pl-4 hover:border-brand-secondary transition-all duration-300"
+              >
+                <p
+                  class="text-white font-bold text-base tracking-tight font-display"
+                >
+                  3 Elephants
+                </p>
+                <p class="text-zinc-500 text-xs mt-0.5">In-Book Showcase</p>
+                <p
+                  class="text-brand-secondary font-semibold font-body text-[10px] tracking-wider uppercase mt-2"
+                >
+                  Kyoorius 2017
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- TESTIMONIALS SECTION -->
   <section
@@ -586,72 +537,84 @@ const finalProjects = liveProjects.length > 0 ? liveProjects : fallbackProjects;
   </section>
 
   <!-- REFINED NEUTRAL CTA SECTION -->
-<section
-  id="contact"
-  class="bg-brand-dark py-24 border-t border-brand-border relative"
->
-  <!-- Subtle brand primary background ambient blur -->
-  <div
-    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"
+  <section
+    id="contact"
+    class="bg-brand-dark py-24 border-t border-brand-border relative"
   >
-  </div>
-
-  <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
-    <h2
-      class="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight"
-    >
-      Ready to make something<br /><em class="not-italic text-brand-secondary"
-        >unforgettable?</em
-      >
-    </h2>
-    <p class="text-zinc-400 text-lg mb-12 max-w-xl mx-auto font-light">
-      Whether it's a 30-second TVC or a campaign spanning continents — we
-      build stories that work.
-    </p>
-
-    <!-- Contact Channels -->
+    <!-- Subtle brand primary background ambient blur -->
     <div
-      class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-zinc-300 font-mono text-base mb-10"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl pointer-events-none"
     >
-      <a
-        href="mailto:reach@avakkai.studio"
-        class="hover:text-brand-secondary transition-colors flex items-center gap-2"
-      >
-        <span class="text-brand-primary">@</span> reach@avakkai.studio
-      </a>
-      <span class="hidden sm:inline text-brand-border">|</span>
-      <a
-        href="tel:9611104445"
-        class="hover:text-brand-secondary transition-colors flex items-center gap-2"
-      >
-        <span class="text-brand-primary">#</span> +91 96111 04445
-      </a>
     </div>
 
-    <!-- Divider -->
-    <div class="flex items-center gap-6 justify-center mb-10">
-      <span class="h-px w-24 bg-brand-border"></span>
-    </div>
-
-    <!-- Company Profile PDF Download -->
-    <div>
-      <a
-        href="/avakkai_profile.pdf"
-        download
-        class="inline-flex items-center gap-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-xl border border-brand-primary/20 hover:border-brand-primary/40 transition-all shadow-lg hover:shadow-brand-primary/10"
+    <div class="max-w-4xl mx-auto px-6 lg:px-10 text-center relative z-10">
+      <h2
+        class="text-4xl md:text-5xl font-black text-white mb-6 font-display leading-tight"
       >
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-        </svg>
-        Download Company Profile
-        <span class="text-[8px] text-zinc-500 font-mono tracking-widest">PDF</span>
-      </a>
-      <p class="text-zinc-600 text-[10px] font-mono mt-3 tracking-wide">
-        Portfolio, capabilities & case studies
+        Ready to make something<br /><em class="not-italic text-brand-secondary"
+          >unforgettable?</em
+        >
+      </h2>
+      <p class="text-zinc-400 text-lg mb-12 max-w-xl mx-auto font-light">
+        Whether it's a 30-second TVC or a campaign spanning continents — we
+        build stories that work.
       </p>
+
+      <!-- Contact Channels -->
+      <div
+        class="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-zinc-300 font-mono text-base mb-10"
+      >
+        <a
+          href="mailto:reach@avakkai.studio"
+          class="hover:text-brand-secondary transition-colors flex items-center gap-2"
+        >
+          <span class="text-brand-primary">@</span> reach@avakkai.studio
+        </a>
+        <span class="hidden sm:inline text-brand-border">|</span>
+        <a
+          href="tel:9611104445"
+          class="hover:text-brand-secondary transition-colors flex items-center gap-2"
+        >
+          <span class="text-brand-primary">#</span> +91 96111 04445
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div class="flex items-center gap-6 justify-center mb-10">
+        <span class="h-px w-24 bg-brand-border"></span>
+      </div>
+
+      <!-- Company Profile PDF Download -->
+      <div>
+        <a
+          href="/avakkai_profile.pdf"
+          download
+          class="inline-flex items-center gap-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary font-bold px-8 py-4 text-sm tracking-widest uppercase rounded-xl border border-brand-primary/20 hover:border-brand-primary/40 transition-all shadow-lg hover:shadow-brand-primary/10"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            ></path>
+          </svg>
+          Download Company Profile
+          <span class="text-[8px] text-zinc-500 font-mono tracking-widest"
+            >PDF</span
+          >
+        </a>
+        <p class="text-zinc-600 text-[10px] font-mono mt-3 tracking-wide">
+          Portfolio, capabilities & case studies
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 </Layout>
 
 <style>

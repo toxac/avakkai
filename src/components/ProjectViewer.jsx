@@ -3,14 +3,24 @@ import { useState } from 'react';
 
 export default function ProjectViewer({ initialProjects }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
+  const [showAll, setShowAll] = useState(false);
   
   // Get unique categories from actual project data (flatten the array)
   const allCategories = initialProjects.flatMap(p => p.data.category);
   const uniqueCategories = ['ALL', ...new Set(allCategories)];
 
+  // Filter projects based on active category
   const filteredProjects = activeCategory === 'ALL'
     ? initialProjects
     : initialProjects.filter(p => p.data.category.includes(activeCategory));
+
+  // Determine which projects to show
+  const INITIAL_DISPLAY = 5;
+  const visibleProjects = showAll 
+    ? filteredProjects 
+    : filteredProjects.slice(0, INITIAL_DISPLAY);
+  
+  const hasMoreProjects = filteredProjects.length > INITIAL_DISPLAY;
 
   // Helper function to get image path
   const getImagePath = (project) => {
@@ -20,28 +30,67 @@ export default function ProjectViewer({ initialProjects }) {
     return `/images/projects/${project.id}.jpg`;
   };
 
+  // Handle dropdown change
+  const handleCategoryChange = (e) => {
+    setActiveCategory(e.target.value);
+    setShowAll(false); // Reset show all when category changes
+  };
+
+  // Handle show more/less toggle
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
   return (
     <div className="w-full">
-      {/* Category Toggles */}
-      <div className="flex flex-wrap gap-2 bg-brand-card p-1.5 border border-brand-border rounded-xl font-mono text-xs max-w-max mb-12">
-        {uniqueCategories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer uppercase ${
-              (activeCategory === cat)
-                ? 'bg-brand-primary text-white shadow-md'
-                : 'text-zinc-400 hover:text-white'
-            }`}
+      {/* Category Filter - Dropdown on mobile, Toggles on desktop */}
+      <div className="mb-12">
+        {/* Mobile: Dropdown */}
+        <div className="block sm:hidden">
+          <select
+            value={activeCategory}
+            onChange={handleCategoryChange}
+            className="w-full bg-brand-card border border-brand-border rounded-xl px-4 py-3 text-zinc-300 font-mono text-xs uppercase tracking-wider focus:outline-none focus:border-brand-primary appearance-none"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a1a1aa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right 1rem center',
+              backgroundSize: '12px 8px',
+              paddingRight: '2.5rem',
+            }}
           >
-            {cat === 'ALL' ? 'All Work' : cat}
-          </button>
-        ))}
+            {uniqueCategories.map((cat) => (
+              <option key={cat} value={cat} className="bg-brand-card text-zinc-300">
+                {cat === 'ALL' ? 'All Work' : cat}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Desktop: Toggle Buttons */}
+        <div className="hidden sm:flex flex-wrap gap-2 bg-brand-card p-1.5 border border-brand-border rounded-xl font-mono text-xs max-w-max">
+          {uniqueCategories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setActiveCategory(cat);
+                setShowAll(false);
+              }}
+              className={`px-4 py-2 rounded-lg font-bold transition-all cursor-pointer uppercase ${
+                (activeCategory === cat)
+                  ? 'bg-brand-primary text-white shadow-md'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
+            >
+              {cat === 'ALL' ? 'All Work' : cat}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Grid Display */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProjects.map((project) => {
+        {visibleProjects.map((project) => {
           let cardImagePath = getImagePath(project);
           
           return (
@@ -136,6 +185,32 @@ export default function ProjectViewer({ initialProjects }) {
           );
         })}
       </div>
+
+      {/* Show More / Show Less Button - Only visible on mobile when there are more projects */}
+      {hasMoreProjects && (
+        <div className="mt-8 text-center sm:hidden">
+          <button
+            onClick={toggleShowAll}
+            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary/10 hover:bg-brand-primary/20 text-brand-secondary font-bold text-sm tracking-widest uppercase rounded-xl border border-brand-primary/20 hover:border-brand-primary/40 transition-all"
+          >
+            {showAll ? (
+              <>
+                Show Less
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"/>
+                </svg>
+              </>
+            ) : (
+              <>
+                Show More ({filteredProjects.length - INITIAL_DISPLAY} more)
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
