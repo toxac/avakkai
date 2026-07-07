@@ -4,7 +4,7 @@ client: "Tata Consumer Products"
 category: ["TV Commercial", "Campaign"]
 description: "Avakkai Studio produced a satirical comedy film for Tata Gluco+ that reimagines the myth of Samudra Manthan — the churning of the ocean. Shot on a real location in Pondicherry with an international surf team, the film follows a boat tour promising discovery of a hidden underwater temple. When the boat conks out mid-promise, surfers down Tata Gluco+, paddle out, and physically churn the ocean into waves powerful enough to raise the temple from the deep. With VFX by a Polish studio and a 100-passenger boat redesigned as a set, the film earned its punchline: 'This story has a lot of gas, but Tata Gluco+ is Gas Minus, Energy Plus.'"
 youtubeId: "LeBiO9o9taQ"
-cardImage: "tata-gluco-temple.png"
+cardImage: "tata-gluco-temple.webp"
 featured: false
 highlight: "Myth reimagined | Pondicherry shoot | International surf team | VFX by Poland | 100-passenger boat set"
 tags: ["TVC", "Comedy", "Tata", "Gluco+", "Satirical", "Mythology", "Surf", "Samudra Manthan", "Wunderman Thompson", "Pondicherry", "VFX"]

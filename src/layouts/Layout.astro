@@ -31,6 +31,7 @@ const { title, description = "Premium commercial and film production — Avakkai
   <!-- PRELOAD CRITICAL RESOURCES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/images/hero-poster.webp" fetchpriority="high" />
   
   <!-- CRITICAL CSS (INLINE - Above the fold) -->
   <style>
@@ -65,16 +66,7 @@ const { title, description = "Premium commercial and film production — Avakkai
     .inset-0{inset:0}
   </style>
   
-  <!-- DEFER NON-CRITICAL CSS -->
-  <link 
-    rel="preload" 
-    href="/_astro/global.css" 
-    as="style" 
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link rel="stylesheet" href="/_astro/global.css" />
-  </noscript>
+  
   
   <!-- FONTS - Load asynchronously -->
   <link 

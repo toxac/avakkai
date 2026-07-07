@@ -4,7 +4,7 @@ client: "Britannia"
 category: ["TV Commercial"]
 description: "Avakkai Studio produced a music-led TVC for Britannia Jim Jam that turns a universal traffic jam misery into a joyful celebration. Shot entirely in a Mumbai studio with a fully recreated traffic jam set, the film features choreographed cast performances built around a pre-composed track — delivering high-energy, colourful storytelling in a single shoot day. The concept transforms a mundane, relatable annoyance into the most fun place to be, with Jim Jam as the treat that makes the wait worth it."
 youtubeId: "2CqY8hDrYr0"
-cardImage: "jimjam.png"
+cardImage: "jimjam.webp"
 featured: false
 highlight: "Traffic jam recreated on set | Pre-composed music-led | 1-day shoot | Zero compromise"
 tags: ["TVC", "FMCG", "Choreography", "Music-Led", "Britannia", "Jim Jam", "Campaign", "Commercial", "Kids", "Family"]

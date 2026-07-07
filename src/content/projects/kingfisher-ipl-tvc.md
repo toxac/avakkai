@@ -5,7 +5,7 @@ category: ["Celebrity TVC", "Campaign", "TV Commercial"]
 description: "Avakkai Studio produced a monumental 2-film celebrity TVC campaign for Kingfisher's IPL partnership, bringing back the iconic 'Ooh La La' jingle across seven IPL teams — Mumbai Indians, Royal Challengers Bengaluru, Punjab Kings, Sunrisers Hyderabad, Delhi Daredevils, Rajasthan Royals, and Chennai Super Kings. The campaign featured top cricketers including MS Dhoni and Virat Kohli, with each film capturing the unique identity and energy of each city and fanbase. Shot across 7 cities in 7 days, the musical campaign blended the classic Ooh La La tune with a fresh rap-infused vibe, embodying the brand's timeless message: 'Divided by teams, United by Kingfisher.'"
 youtubeId: "ram1e34yXUw"
 youtubeIds: ["P0r4c4EGSW0"]
-cardImage: "kingfisher-ipl.png"
+cardImage: "kingfisher-ipl.webp"
 featured: true
 highlight: "7 films | 7 cities | 7 days | MS Dhoni & Virat Kohli | IPL 2026 | Ooh La La jingle"
 tags: ["Celebrity", "TVC", "IPL", "Cricket", "MS Dhoni", "Virat Kohli", "Kingfisher", "Musical", "Campaign", "Sports", "Rap", "United Breweries"]

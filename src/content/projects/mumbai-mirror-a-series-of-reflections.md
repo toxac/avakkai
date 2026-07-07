@@ -5,7 +5,7 @@ category: ["Social Awareness", "Documentary"]
 description: "Avakkai Studio partnered with Mumbai Mirror and Wunderman Thompson to create 'Mumbai Mirrored: A Series of Reflections' — a 5-part documentary series chronicling the city's transformation from Bombay to Mumbai. The campaign featured five iconic citizens — Shirish Patel, Julio Ribeiro, Pushpa Bhave, Gerson da Cunha, and J V Pawar — offering raw, personal reflections on governance, infrastructure, grassroots movements, cultural shifts, and social justice. Blending historical BCCL archival photography with striking black-and-white visual storytelling, the series captured the parallel journeys of citizens who witnessed the city evolve. The launch-day print innovation — a reverse-printed masthead — drove home the theme of reflection, making it one of Mumbai Mirror's most acclaimed branded content campaigns."
 youtubeId: "iaiK1JZKPZE"
 youtubeIds: ["Y7NwFjd6nIw", "HGu54p_oX-0", "paHV2azOQJo", "y2Ue7lekhSQ"]
-cardImage: "mumbai-mirror.png"
+cardImage: "mumbai-mirror.webp"
 featured: false
 highlight: "5-part documentary series | 5 iconic citizens | Bombay to Mumbai | BCCL archives | Reverse masthead innovation"
 tags: ["Documentary", "Branded Content", "Mumbai Mirror", "City Storytelling", "Social Impact", "Archive", "Historical", "Bombay", "Mumbai", "BCCL", "Wunderman Thompson", "Print Innovation"]

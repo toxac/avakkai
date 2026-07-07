@@ -4,7 +4,7 @@ client: "Britannia"
 category: ["TV Commercial", "Campaign"]
 description: "Avakkai Studio produced an immersive TVC for Britannia Treat A Naut, transforming a cookie-brand game into a space-mission adventure. Shot in a single day in Mumbai, the campaign physically recreated the game world on set — turning a kid's imagination into a tangible mission where treats fuel adventure. The film served as the entry point to a larger promotional campaign, driving brand awareness and engagement among India's young gamers, with winners receiving a trip to DisneyLand."
 youtubeId: "d2rEbiUxGpg"
-cardImage: "britannia-treat-a-naut-tvc.png"
+cardImage: "britannia-treat-a-naut-tvc.webp"
 featured: false
 highlight: "Game-world integration | 1-day Mumbai shoot | Promotional campaign with DisneyLand prize"
 tags: ["TVC", "Campaign", "Gaming", "Kids", "Brand Launch", "Promotional", "Food & Beverage", "DisneyLand"]
