@@ -29,14 +29,12 @@ Avakkai Studio developed the brand identity and the film as one integrated thoug
 
 ## Credits
 
-**Client:** TVS Motor Company  
-**Production:** Avakkai Studio  
-**Product:** TVS Neo AMI  
-**Market:** Africa (Gen Z riders)  
-**Format:** Digital Launch Film  
-**Location:** Bangalore Studio (14-foot LED wall backdrop)  
-**Technique:** Mixed media, in-camera LED wall environments  
-**Release:** December 2023
+**Client**: TVS Motor Company
+**Agency/ Production House**: Avakkai Studio
+**Product**: TVS Neo AMI
+**Market**: Africa (Gen Z riders)
+**Format**: Digital Launch Film
+
 
 ## Outcome & Results
 

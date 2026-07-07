@@ -2,7 +2,7 @@
 title: "Kingfisher — IPL 2026 'Ooh La La' Campaign (7 Films)"
 client: "Kingfisher"
 category: ["Celebrity TVC", "Campaign", "TV Commercial"]
-description: "Avakkai Studio produced a monumental 7-film celebrity TVC campaign for Kingfisher's IPL 2026 partnership, bringing back the iconic 'Ooh La La' jingle across seven IPL teams — Mumbai Indians, Royal Challengers Bengaluru, Punjab Kings, Sunrisers Hyderabad, Delhi Capitals, Rajasthan Royals, and Chennai Super Kings. The campaign featured top cricketers including MS Dhoni and Virat Kohli, with each film capturing the unique identity and energy of each city and fanbase. Shot across 7 cities in 7 days, the musical campaign blended the classic Ooh La La tune with a fresh rap-infused vibe, embodying the brand's timeless message: 'Divided by teams, United by Kingfisher.'"
+description: "Avakkai Studio produced a monumental 2-film celebrity TVC campaign for Kingfisher's IPL partnership, bringing back the iconic 'Ooh La La' jingle across seven IPL teams — Mumbai Indians, Royal Challengers Bengaluru, Punjab Kings, Sunrisers Hyderabad, Delhi Daredevils, Rajasthan Royals, and Chennai Super Kings. The campaign featured top cricketers including MS Dhoni and Virat Kohli, with each film capturing the unique identity and energy of each city and fanbase. Shot across 7 cities in 7 days, the musical campaign blended the classic Ooh La La tune with a fresh rap-infused vibe, embodying the brand's timeless message: 'Divided by teams, United by Kingfisher.'"
 youtubeId: "ram1e34yXUw"
 youtubeIds: ["P0r4c4EGSW0"]
 cardImage: "kingfisher-ipl.png"
@@ -32,13 +32,15 @@ Avakkai Studio revived the iconic "Ooh La La" jingle — synonymous with Kingfis
 
 ## Credits
 
-**Client:** Kingfisher (United Breweries / HEINEKEN)  
-**Agency:** Avakkai Studio  
-**Format:** Musical TVC campaign for YouTube & Broadcast  
-**Scale:** 7 Films | 7 Cities | 7 Shoot Days  
-**Talent:** MS Dhoni, Virat Kohli, and top players across 7 IPL teams  
-**IPL Teams Featured:** Mumbai Indians, Royal Challengers Bengaluru, Punjab Kings, Sunrisers Hyderabad, Delhi Capitals, Rajasthan Royals, Chennai Super Kings  
-**Release:** IPL 2026 Season
+**Client**: UB Group
+**Product**: Kingfisher caledar
+**Agency**: JWT Bangalore
+**Production House**: Avakkai.Studio
+**Format**: TVC campaign 
+**Scale**: 2 Films | 7 Cities | 7 Shoot Days
+**Talent**: MS Dhoni, Virat Kohli, and top players across 7 IPL teams
+**IPL Teams Featured**: Mumbai Indians, Royal Challengers Bengaluru, Punjab Kings, Sunrisers Hyderabad, Delhi Daredevils, Rajasthan Royals, Chennai Super Kings
+
 
 ## Outcome & Results
 

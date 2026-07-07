@@ -4,7 +4,7 @@ client: "Cult.fit"
 category: ["Digital Film", "Campaign"]
 description: "Avakkai Studio produced two cult-style digital comedy films for Cult.fit's End of Season Sale, blending Bollywood energy, sharp humour, and fitness brand identity. The campaign parodied FOMO-driven urgency through two distinct creative approaches — a high-fashion gym chaos film and a full Bollywood parody with choreographed melodrama. Shot in a single day with pre-composed music driving every beat, the films delivered laughter and call-to-action in the same moment, positioning Cult.fit as a brand that doesn't take itself too seriously while driving massive engagement."
 youtubeId: "uuSAij6Gag0"
-youtubeIds: ["uSdatu0rjr8"]
+youtubeIds: ["uuSAij6Gag0","uSdatu0rjr8"]
 cardImage: "cult-fitness.png"
 featured: true
 highlight: "2 films in 1 day | Bollywood parody | Pre-choreographed to music | 25M+ reach"
@@ -30,12 +30,10 @@ The concept didn't separate the joke from the sell. Instead, the urgency itself 
 
 ## Credits
 
-**Client:** Cult.fit  
-**Agency:** Avakkai Studio  
-**Concept:** In-house client team in collaboration with Avakkai Studio  
-**Format:** Digital comedy spots for YouTube  
-**Shoot Duration:** 1 Day  
-**Music:** Pre-composed tracks driving choreography and performance
+**Client**: Cult.fit
+**Creative**: Cult.fit in house in collab with Avakkai.Studio
+**Production house**: Avakkai Studio
+**Format**: Socail Media 
 
 ## Outcome & Results
 

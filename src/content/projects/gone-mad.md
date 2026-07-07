@@ -28,11 +28,11 @@ Avakkai Studio adopted a **music-first production philosophy** — the same appr
 
 ## Credits
 
-**Agency:** Avakkai Studio (Concept to final film — fully in-house, direct with client)  
-**Product:** Chocostick  
-**Format:** Musical digital film for YouTube  
-**Shoot Duration:** 1 Day  
-**Cast:** Full cast choreography
+**Client**: Garuda Foods 
+**Brand**: Gone Mad Chocosticks
+**Agency/ Production House**: Avakkai Studio
+**Format**: TVC and social media platforms
+
 
 ## Outcome & Results
 

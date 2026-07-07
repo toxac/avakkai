@@ -30,14 +30,12 @@ Avakkai Studio developed the brand identity and the film as one integrated thoug
 
 ## Credits
 
-**Client:** TVS Motor Company  
-**Production:** Avakkai Studio  
-**Product:** TVS HLX 150F  
-**Market:** Egypt (urban riders)  
-**Format:** Digital Launch Film  
-**Location:** Bangalore Studio (14-foot LED wall backdrop)  
-**Technique:** Mixed media, in-camera LED wall environments  
-**Release:** 2024
+**Client**: TVS Motor Company
+**Agency/ Production House**: Avakkai Studio
+**Product**: HLX 150F
+**Market**: Egypt (Gen Z riders)
+**Format**: Digital Launch Film
+
 
 ## Outcome & Results
 

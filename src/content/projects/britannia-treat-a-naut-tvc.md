@@ -31,12 +31,11 @@ Rather than simply referencing the game, we physically recreated its world withi
 
 ## Credits
 
-**Client:** Britannia  
-**Agency:** Avakkai Studio  
-**Product:** Treat A Naut Cookies  
-**Format:** YouTube TVC  
-**Location:** Mumbai  
-**Shoot Duration:** 1 Day
+**Client**: Britannia
+**Agency**: JWT Bengaluru
+**Production House**: Avakkai.Studio 
+**Format**: TVC and Social media
+**Location**: Mumbai
 
 ## Outcome & Results
 

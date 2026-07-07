@@ -1,5 +1,5 @@
 ---
-title: "Britannia Jim Jam — Musical TVC"
+title: "Britannia Jim Jam — Happily Jammed"
 client: "Britannia"
 category: ["TV Commercial"]
 description: "Avakkai Studio produced a music-led TVC for Britannia Jim Jam that turns a universal traffic jam misery into a joyful celebration. Shot entirely in a Mumbai studio with a fully recreated traffic jam set, the film features choreographed cast performances built around a pre-composed track — delivering high-energy, colourful storytelling in a single shoot day. The concept transforms a mundane, relatable annoyance into the most fun place to be, with Jim Jam as the treat that makes the wait worth it."
@@ -29,12 +29,13 @@ Avakkai Studio conceptualized a traffic jam that turns into a celebration — a 
 
 ## Credits
 
-**Client:** Britannia  
-**Product:** Jim Jam  
-**Agency:** Avakkai Studio  
-**Format:** Musical TVC for YouTube  
-**Location:** Mumbai Studio (traffic jam fully recreated on set)  
-**Shoot Duration:** 1 Day
+**Client**: Britannia
+**Product**: Jim Jam
+**Agency**: JWT Bengaluru
+**Production House**: Avakkai.Studio
+**Format**:TVC and social media
+**Location**: Mumbai Studio (traffic jam fully recreated on set)
+
 
 ## Outcome & Results
 

@@ -35,13 +35,11 @@ Avakkai Studio approached the portfolio with a single principle: international c
 
 ## Credits
 
-**Client:** TVS Motor Company  
-**Production:** Avakkai Studio  
-**Markets:** Africa, Egypt, Iran  
-**Formats:** Digital launch films, anniversary campaigns, seasonal content, comedy  
-**Key Campaigns:** Neo AMI Launch, 10 Years of HLX, HLX 150F Launch, Eid Mubarak, Team Melli Sponsorship  
-**Technique:** Regional casting, LED wall studio production, mixed media  
-**Release Timeline:** 2019–2024
+**Client**: TVS Motor Company
+**Agency / Production**: Avakkai Studio
+**Markets**: Africa, Egypt, Iran
+**Formats**: Digital launch films, anniversary campaigns, seasonal content, comedy
+**Key Campaigns**: Neo AMI Launch, 10 Years of HLX, HLX 150F Launch, Eid Mubarak, Team Melli Sponsorship
 
 ## Outcome & Results
 

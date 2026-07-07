@@ -33,15 +33,14 @@ Avakkai Studio reimagined the ancient myth of Samudra Manthan — the churning o
 
 ## Credits
 
-**Client:** Tata Consumer Products — Tata Gluco+  
-**Production:** Avakkai Studio  
-**Creative Agency:** Wunderman Thompson, Delhi  
-**Format:** Comedy TVC for YouTube  
-**Location:** Pondicherry (real location)  
-**Talent:** International surf team  
-**VFX:** Poland  
-**Set:** 100-passenger boat redesigned for production  
-**Release:** 2022
+**Client**: Tata Consumer Products — Tata Gluco+
+**Production House**: Avakkai Studio
+**Creative Agency**: Wunderman Thompson, Delhi
+**Format**: TVC & social media 
+**Location**: Pondicherry (real location)
+**Talent**: International surf team
+**VFX**: Poland
+**Set**: 100-passenger boat redesigned for production
 
 ## Outcome & Results
 

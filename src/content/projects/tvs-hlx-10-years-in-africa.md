@@ -31,13 +31,12 @@ Avakkai Studio embraced the constraint and turned it into creative opportunity. 
 
 ## Credits
 
-**Client:** TVS Motor Company  
-**Production:** Avakkai Studio  
-**Product:** TVS HLX  
-**Format:** Digital Film  
-**Occasion:** 10th Anniversary in Africa (timed around African Nations Championship)  
-**Technique:** Fully post-produced (3D modelling, stock footage integration, VFX compositing)  
-**Release:** August 2024
+**Client**: TVS Motor Company
+**Agency/ Production House**: Avakkai Studio
+**Product**: TVS HLX
+**Format**: Digital Film
+**Occasion**: 10th Anniversary in Africa (timed around African Nations Championship)
+
 
 ## Outcome & Results
 
